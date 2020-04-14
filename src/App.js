@@ -38,11 +38,14 @@ export class App extends React.Component {
 
   handleScroll(event) {
     var header = document.getElementById("myHeader");
-    var sticky = !!header ? header.offsetTop : 0;
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
+    if(!!header) {
+
+      var sticky = !!header ? header.offsetTop : 0;
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
     }
   }
   breadCrumbsLink() {

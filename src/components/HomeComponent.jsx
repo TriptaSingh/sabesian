@@ -14,7 +14,10 @@ import img4 from '../images/IndexMedia/4.jpg';
 import { Link } from 'react-router-dom';
 export class HomeComponent extends React.Component {
   componentDidMount() {
-    // window.mediumWidget();
+    var widget = document.getElementById("medium-widget"); 
+    if(!!widget) {
+      window.mediumWidget();
+    }
   }
 
   addFilter(event) {

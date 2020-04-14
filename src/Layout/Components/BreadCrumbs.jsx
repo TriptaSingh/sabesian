@@ -79,7 +79,7 @@ export class BreadCrumbsComponent extends React.Component {
         const pageName = this.props.breadCLinks.length > 0 ? String(this.props.breadCLinks[this.props.breadCLinks.length - 1].name) : '';
         const crumbs = this.props.breadCLinks;
         return (
-            crumbs.length > 1 ? <div className="top-container" >
+            crumbs.length > 1 ? <div className="top-container" style={{'paddingTop':'220px'}}>
                 <h2 key='headerBreadC' className="headerBreadC">{pageName}</h2>
 
                 <nav className="breadcrumbs" aria-label="breadcrumb">
