@@ -28,19 +28,19 @@ const ContactFieldComponent = () => {
           <div className="col-lg-3">
             <div className="contact_info">
               <div className="info_item">
-                <i className="fa fa-home"></i>
+                <i className="lnr lnr-home"></i>
                 <h6>{data.C1}</h6>
                 <p>{data.C2}</p>
               </div>
               <div className="info_item">
-                <i className="fa fa-phone"></i>
+                <i className="lnr lnr-phone-handset"></i>
                 <h6>
                   <a href="tel:+94719786867">{data.C3}</a>
                 </h6>
                 <p>{data.C4} </p>
               </div>
               <div className="info_item">
-                <i className="fa fa-envelope"></i>
+                <i className="lnr lnr-envelope"></i>
                 <h6>
                   <a href="mailto:sabesan996@gmail.com">{data.ContEmail}</a>
                 </h6>
@@ -57,7 +57,7 @@ const ContactFieldComponent = () => {
                       href="https://www.linkedin.com/in/sabesan96/"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-linkedin"></i>
+                      <i className="fontSize2 fab fa-linkedin"></i>
                     </a>
                   </li>
                   <li>
@@ -69,7 +69,7 @@ const ContactFieldComponent = () => {
                       href="https://github.com/sabesansathananthan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-github"></i>
+                      <i className="fontSize2 fab fa-github"></i>
                     </a>
                   </li>
                   <li>
@@ -81,7 +81,7 @@ const ContactFieldComponent = () => {
                       href="https://medium.com/@sabesan96"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-medium"></i>
+                      <i className="fontSize2 fab fa-medium"></i>
                     </a>
                   </li>
                   <li>
@@ -93,7 +93,7 @@ const ContactFieldComponent = () => {
                       href="https://stackoverflow.com/users/8629258/sathananthan-sabesan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-stack-overflow"></i>
+                      <i className="fontSize2 fab fa-stack-overflow"></i>
                     </a>
                   </li>
                   <li>
@@ -105,7 +105,7 @@ const ContactFieldComponent = () => {
                       href="mailto:sabesan996@gmail.com"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-envelope"></i>
+                      <i className="fontSize2 far fa-envelope"></i>
                     </a>
                   </li>
                   <li>
@@ -117,7 +117,7 @@ const ContactFieldComponent = () => {
                       href="https://www.quora.com/profile/Sathananthan-Sabesan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-quora"></i>
+                      <i className="fontSize2 fab fa-quora"></i>
                     </a>
                   </li>
                   <li>
@@ -129,7 +129,7 @@ const ContactFieldComponent = () => {
                       href="https://wa.me/94770711017"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-whatsapp"></i>
+                      <i className="fontSize2 fab fa-whatsapp"></i>
                     </a>
                   </li>
                   <li>
@@ -141,7 +141,7 @@ const ContactFieldComponent = () => {
                       href="https://telegram.me/TheSabesan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-telegram"></i>
+                      <i className="fontSize2 fab fa-telegram"></i>
                     </a>
                   </li>
                   <li>
@@ -153,7 +153,7 @@ const ContactFieldComponent = () => {
                       href="https://twitter.com/TheSabesan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-twitter"></i>
+                      <i className="fontSize2 fab fa-twitter"></i>
                     </a>
                   </li>
                   <li>
@@ -165,7 +165,7 @@ const ContactFieldComponent = () => {
                       href="skype:live:a566c037031e4cb?chat"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-skype"></i>
+                      <i className="fontSize2 fab fa-skype"></i>
                     </a>
                   </li>
                   <li>
@@ -177,7 +177,7 @@ const ContactFieldComponent = () => {
                       href="https://www.facebook.com/sathananthan.sabesan"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-facebook-f"></i>
+                      <i className="fontSize2 fab fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
@@ -189,19 +189,19 @@ const ContactFieldComponent = () => {
                       href="https://www.instagram.com/s_sabesan/"
                       target="_blank"
                     >
-                      <i className="fontSize2 fa fa-instagram"></i>
+                      <i className="fontSize2 fab fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://flipboard.com/@TheSabesan" target="_blank">
-                      <img
-                        src={flipboard}
-                        className="imgUpdate"
-                        onMouseOver={() => {
-                          "this.style.color='#e12828'";
-                        }}
-                        onMouseOut={onMouseOut}
-                      ></img>
+                    <a
+                      onMouseOver={(e) => {
+                        e.target.style.color = "#e12828";
+                      }}
+                      onMouseOut={onMouseOut}
+                      href="https://flipboard.com/@TheSabesan"
+                      target="_blank"
+                    >
+                      <i className="fontSize2 fab fa-flipboard"></i>
                     </a>
                   </li>
                 </ul>
@@ -257,7 +257,7 @@ const ContactFieldComponent = () => {
               </div>
               <div className="col-md-12 text-right">
                 <button type="submit" value="submit" className="submit_btn">
-                  {data.SendMessage} <i className="fa fa-envelope"></i>
+                  {data.SendMessage} <i className="fas fa-envelope"></i>
                 </button>
               </div>
             </form>
