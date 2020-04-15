@@ -123,3 +123,54 @@ $dip: #222222;
 	}	
 	
 }
+
+ @media (max-width: 575px) {
+    /* Home Banner Area css
+      ============================================================================================ */
+    .home_banner_area .banner_inner .banner_content h2 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+    .home_banner_area {
+      min-height: 450px;
+    }
+    .home_banner_area .banner_inner {
+      min-height: 450px;
+    }
+    .blog_banner .banner_inner .blog_b_text {
+      margin-top: 0px;
+    }
+    .home_banner_area .banner_inner .banner_content img {
+      display: none;
+    }
+    .home_banner_area .banner_inner .banner_content h5 {
+      margin-top: 0px;
+    }
+ }
+
+ @media (max-width: 480px) {
+    /* Main Menu Area css
+      ============================================================================================ */
+    .header_area .navbar-collapse {
+      max-height: 250px;
+    }
+    /* End Main Menu Area css
+      ============================================================================================ */
+  
+    /* Home Banner Area css
+      ============================================================================================ */
+    .home_banner_area .banner_inner .banner_content {
+      padding: 30px 15px;
+      margin-top: 0px;
+    }
+    .home_banner_area .banner_inner .banner_content h2 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+    .banner_content .white_btn {
+      display: block;
+    }
+    .home_banner_area .banner_inner .banner_content h3 {
+      font-size: 24px;
+    }
+ }
