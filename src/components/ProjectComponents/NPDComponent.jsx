@@ -1,12 +1,12 @@
-import React from 'react';
-import NanoPro from '../../images/NanoPro.jpg';
-import pdf from '../../images/pdf.svg';
-import data from '../../static/staticData.json';
-import ProjectDescription from '../../Docs/ProjectDescription.pdf';
-import Report from '../../Docs/Report.pdf';
+import React from "react";
+import NanoPro from "../../images/NanoPro.jpg";
+import pdf from "../../images/pdf.svg";
+import data from "../../static/staticData.json";
+import ProjectDescription from "../../Docs/ProjectDescription.pdf";
+import Report from "../../Docs/Report.pdf";
 export const NPDComponent = () => {
-    return(
-        <section className="portfolio_details_area p_120">
+  return (
+    <section className="portfolio_details_area p_120">
       <div className="container">
         <div className="portfolio_details_inner">
           <div className="row">
@@ -19,30 +19,42 @@ export const NPDComponent = () => {
               <div className="portfolio_right_text">
                 <h4>{data.NPD}</h4>
                 <p>
-                  {data.NPDT1}<sup><font color="#777777">{data.nd}</font></sup>
+                  {data.NPDT1}
+                  <sup>
+                    <font color="#777777">{data.nd}</font>
+                  </sup>
                   {data.NPDT2}
                 </p>
                 <ul className="list">
-                  <li><span>{data.Year}</span>{data.numYR17}</li>
                   <li>
-                    <span><h5>{data.ToolsUsed}</h5></span>
-                  </li>
-                  <li><span>{data.Software}</span>{data.NPDT3}</li>
-                  <li>
-                    <span>{data.Hardware}</span>{data.NPDT4}
+                    <span>{data.Year}</span>
+                    {data.numYR17}
                   </li>
                   <li>
-                    <span><h5>{data.Documents}</h5></span>{data.ArthrocureT4}
+                    <span>
+                      <h5>{data.ToolsUsed}</h5>
+                    </span>
+                  </li>
+                  <li>
+                    <span>{data.Software}</span>
+                    {data.NPDT3}
+                  </li>
+                  <li>
+                    <span>{data.Hardware}</span>
+                    {data.NPDT4}
+                  </li>
+                  <li>
+                    <span>
+                      <h5>{data.Documents}</h5>
+                    </span>
+                    {data.ArthrocureT4}
                   </li>
 
                   <div className="social_widget">
                     <ul className="list">
                       <li>
                         <figure>
-                          <a
-                            href={ProjectDescription}
-                            target="_blank"
-                          >
+                          <a href={ProjectDescription} target="_blank">
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -58,10 +70,7 @@ export const NPDComponent = () => {
                       </li>
                       <li>
                         <figure>
-                          <a
-                            href={Report}
-                            target="_blank"
-                          >
+                          <a href={Report} target="_blank">
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -79,24 +88,23 @@ export const NPDComponent = () => {
                   </div>
 
                   <li>
-                    <span><h5>{data.Project}</h5></span>{data.ChatbotT4}
+                    <span>
+                      <h5>{data.Project}</h5>
+                    </span>
+                    {data.ChatbotT4}
                   </li>
                   <a href="#" target="_blank">
                     <font color="black">
-                      <i
-                        className="fa fa-github-square customSize"
-                      ></i
-                    ></font>
+                      <i className="fab fa-github-square customSize"></i>
+                    </font>
                   </a>
                 </ul>
               </div>
             </div>
           </div>
-          <p>
-            {data.NPDT5}
-          </p>
+          <p>{data.NPDT5}</p>
         </div>
       </div>
     </section>
-    )
-}
+  );
+};
