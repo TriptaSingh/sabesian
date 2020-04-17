@@ -1,10 +1,10 @@
 import React from "react";
-import NanoPro from "../../images/NanoPro.jpg";
-import pdf from "../../images/pdf.svg";
+import SpellMe from "../../images/Project/spell Me.jpg";
+import ppt from "../../images/Icons/ppt.png";
+import SpellMeFile from "../../Docs/SpellMe.pptx";
 import data from "../../static/staticData.json";
-import ProjectDescription from "../../Docs/ProjectDescription.pdf";
-import Report from "../../Docs/Report.pdf";
-export const NPDComponent = () => {
+
+export const SpellMeComponent = () => {
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
@@ -12,23 +12,16 @@ export const NPDComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={NanoPro} alt="" />
+                <img className="img-fluid" src={SpellMe} alt="" />
               </div>
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.NPD}</h4>
-                <p>
-                  {data.NPDT1}
-                  <sup>
-                    <font color="#777777">{data.nd}</font>
-                  </sup>
-                  {data.NPDT2}
-                </p>
+                <h4>{data.SpellMe}</h4>
+                <p>{data.SpellMe1}</p>
                 <ul className="list">
                   <li>
-                    <span>{data.Year}</span>
-                    {data.numYR17}
+                    <span>{data.Year}</span>: {data.numYR18}
                   </li>
                   <li>
                     <span>
@@ -37,11 +30,11 @@ export const NPDComponent = () => {
                   </li>
                   <li>
                     <span>{data.Software}</span>
-                    {data.NPDT3}
+                    {data.SpellMe2}
                   </li>
                   <li>
-                    <span>{data.Hardware}</span>
-                    {data.NPDT4}
+                    <span>{data.Environment}</span>
+                    {data.SpellMe3}
                   </li>
                   <li>
                     <span>
@@ -49,38 +42,21 @@ export const NPDComponent = () => {
                     </span>
                     {data.ArthrocureT4}
                   </li>
-
                   <div className="social_widget">
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={ProjectDescription} target="_blank">
+                          <a href={SpellMeFile} target="_blank">
                             <img
                               className="img-fluid"
-                              src={pdf}
+                              src={ppt}
                               alt="ppt"
                               width="50"
                               height="45"
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.Description}</font>
-                          </figcaption>
-                        </figure>
-                      </li>
-                      <li>
-                        <figure>
-                          <a href={Report} target="_blank">
-                            <img
-                              className="img-fluid"
-                              src={pdf}
-                              alt="ppt"
-                              width="50"
-                              height="45"
-                            />
-                          </a>
-                          <figcaption>
-                            <font size="1">{data.Report}</font>
+                            <font size="1">{data.Presentation}</font>
                           </figcaption>
                         </figure>
                       </li>
@@ -89,20 +65,34 @@ export const NPDComponent = () => {
 
                   <li>
                     <span>
-                      <h5>{data.Project}</h5>
+                      <h5>{data.Article}</h5>
                     </span>
-                    {data.ChatbotT4}
+                    {data.ArticleRead}
                   </li>
-                  <a href="#" target="_blank">
-                    <font color="black">
-                      <i className="fab fa-github-square customSize"></i>
-                    </font>
+
+                  <a
+                    href="https://medium.com/datadriveninvestor/edutainment-game-spell-me-66fb21fb1b80"
+                    target="_blank"
+                  >
+                    <i
+                      className="fab fa-medium customSize"
+                      style={{ color: "black" }}
+                    ></i>
                   </a>
                 </ul>
               </div>
             </div>
           </div>
-          <p>{data.NPDT5}</p>
+          <p className="alignText">
+            {data.SpellMe4}
+            <font color="#222222">{data.DialogGameHunt} </font>
+            {data.SpellMe5}
+          </p>
+          <p className="alignText">
+            {data.SpellMe6}
+            <br />
+            {data.SpellMe7}
+          </p>
         </div>
       </div>
     </section>

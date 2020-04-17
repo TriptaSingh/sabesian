@@ -1,8 +1,7 @@
 import React from "react";
-import Chatbot from "../../images/Chatbot.jpg";
+import Nursery from "../../images/Project/Nursery.jpg";
 import data from "../../static/staticData.json";
-
-export const ChatbotComponent = () => {
+export const NurseryMSComponent = () => {
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
@@ -10,18 +9,18 @@ export const ChatbotComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={Chatbot} alt="" />
+                <img className="img-fluid" src={Nursery} alt="" />
               </div>
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.Chatbot}</h4>
+                <h4>{data.NMS}</h4>
                 <p>
-                  {data.ChatbotT1}
+                  {data.NMST1}
                   <sup>
-                    <font color="#777777">{data.th}</font>
+                    <font color="#777777">{data.rd}</font>
                   </sup>
-                  {data.ChatbotT2}
+                  {data.NMST2}
                 </p>
                 <ul className="list">
                   <li>
@@ -34,8 +33,9 @@ export const ChatbotComponent = () => {
                   </li>
                   <li>
                     <span>{data.Software}</span>
-                    {data.ChatbotT3}
+                    {data.NMST3}
                   </li>
+                  <li></li>
                   <li>
                     <span>
                       <h5>{data.Project}</h5>
@@ -43,7 +43,7 @@ export const ChatbotComponent = () => {
                     {data.ChatbotT4}
                   </li>
                   <a
-                    href="https://github.com/sabesansathananthan/chatbot"
+                    href="https://github.com/sabesansathananthan/Nursery_Management"
                     target="_blank"
                   >
                     <font color="black">
@@ -54,8 +54,8 @@ export const ChatbotComponent = () => {
               </div>
             </div>
           </div>
-          <p className="alignText">{data.ChatbotT5}</p>
-          <p className="alignText">{data.ChatbotT6}</p>
+          <p>{data.NMST4}</p>
+          <p>{data.NMST5}</p>
         </div>
       </div>
     </section>

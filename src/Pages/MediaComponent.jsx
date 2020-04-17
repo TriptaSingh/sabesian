@@ -10,7 +10,7 @@ import IEEEP1 from "../images/media/IEEEP-1.jpg";
 import IEEEP2 from "../images/media/IEEEP-2.jpg";
 import IEEES1 from "../images/media/IEEES12-1.jpg";
 import IEEES2 from "../images/media/IEEES12-2.jpg";
-import ImageCardComponent from "./ImageCardComponent";
+import ImageCardComponent from "../components/ImageCardComponent";
 
 export const MediaComponent = () => {
   const imgList = [
