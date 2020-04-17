@@ -1,6 +1,5 @@
 import React from "react";
 import data from "../static/staticData.json";
-import flipboard from "../images/flipboard.png";
 import MapContainer from "../Layout/Components/GoogleMap";
 // import GoogleMapReact from 'google-map-react';
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;

@@ -1,12 +1,11 @@
-import React from 'react';
-import EFarming from '../../images/EFarming.jpg';
-import ppt from '../../images/ppt.png';
-import Medium from '../../images/Medium.png';
-import data from '../../static/staticData.json';
-import EFarmingFile from '../../Docs/EFarming.pptx';
+import React from "react";
+import EFarming from "../../images/Project/EFarming.jpg";
+import ppt from "../../images/Icons/ppt.png";
+import data from "../../static/staticData.json";
+import EFarmingFile from "../../Docs/EFarming.pptx";
 export const EFarmingComponent = () => {
-    return (
-        <section className="portfolio_details_area p_120">
+  return (
+    <section className="portfolio_details_area p_120">
       <div className="container">
         <div className="portfolio_details_inner">
           <div className="row">
@@ -18,20 +17,29 @@ export const EFarmingComponent = () => {
             <div className="col-md-6">
               <div className="portfolio_right_text">
                 <h4>{data.EFarming}</h4>
-                <p>
-                  {data.EFarmT1}
-                </p>
+                <p>{data.EFarmT1}</p>
                 <ul className="list">
-                  <li><span>{data.Year}</span>: {data.numYR}</li>
                   <li>
-                    <span><h5>{data.ToolsUsed}</h5></span>
-                  </li>
-                  <li><span>{data.Software}</span>{data.EFarmT2}</li>
-                  <li>
-                    <span>{data.Hardware}</span>{data.EFarmT3}
+                    <span>{data.Year}</span>: {data.numYR}
                   </li>
                   <li>
-                    <span><h5>{data.Documents}</h5></span>{data.ArthrocureT4}
+                    <span>
+                      <h5>{data.ToolsUsed}</h5>
+                    </span>
+                  </li>
+                  <li>
+                    <span>{data.Software}</span>
+                    {data.EFarmT2}
+                  </li>
+                  <li>
+                    <span>{data.Hardware}</span>
+                    {data.EFarmT3}
+                  </li>
+                  <li>
+                    <span>
+                      <h5>{data.Documents}</h5>
+                    </span>
+                    {data.ArthrocureT4}
                   </li>
                   <div className="social_widget">
                     <ul className="list">
@@ -39,14 +47,14 @@ export const EFarmingComponent = () => {
                         <figure>
                           <a href={EFarmingFile} target="_blank">
                             <img
-                                    className="img-fluid"
-                                    src={ppt}
-                                    alt="ppt"
-                                    width="50"
-                                    height="45"
+                              className="img-fluid"
+                              src={ppt}
+                              alt="ppt"
+                              width="50"
+                              height="45"
                             />
                           </a>
-                          <figcaption >
+                          <figcaption>
                             <font size="1">{data.Presentation}</font>
                           </figcaption>
                         </figure>
@@ -54,7 +62,10 @@ export const EFarmingComponent = () => {
                     </ul>
                   </div>
                   <li>
-                    <span><h5>{data.Article}</h5></span>{data.ArticleRead}
+                    <span>
+                      <h5>{data.Article}</h5>
+                    </span>
+                    {data.ArticleRead}
                   </li>
 
                   <div className="social_widget">
@@ -65,7 +76,10 @@ export const EFarmingComponent = () => {
                             href="https://medium.com/codezillas/e-farming-831fe010ee4c"
                             target="_blank"
                           >
-                          <img src={Medium} alt="" className="customImgWidth"/>
+                            <i
+                              className="fab fa-medium customSize"
+                              style={{ color: "black" }}
+                            ></i>
                           </a>
                           <figcaption>
                             <font size="1">{data.EFarming}</font>
@@ -78,7 +92,10 @@ export const EFarmingComponent = () => {
                             href="https://medium.com/codezillas/e-farming-extended-by-ai-2618e106705b"
                             target="_blank"
                           >
-                            <img src={Medium} alt="" className="customImgWidth"/>
+                            <i
+                              className="fab fa-medium customSize"
+                              style={{ color: "black" }}
+                            ></i>
                           </a>
                           <figcaption>
                             <font size="1">{data.EFarmT4}</font>
@@ -91,12 +108,10 @@ export const EFarmingComponent = () => {
               </div>
             </div>
           </div>
-          <p>{data.EFarmT5}
-          </p>
-          <p>{data.EFarmT6}
-          </p>
+          <p>{data.EFarmT5}</p>
+          <p>{data.EFarmT6}</p>
         </div>
       </div>
     </section>
-    )
-}
+  );
+};

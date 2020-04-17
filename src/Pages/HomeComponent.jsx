@@ -1,12 +1,12 @@
 import React from "react";
 import data from "../static/staticData.json";
 import "../styles/Site.scss";
-import FaceClassification from "../images/Faceclassify.jpg";
-import Arthritis from "../images/Arthritis.jpg";
-import Spellme from "../images/spell Me.jpg";
-import Efarming from "../images/EFarming.jpg";
-import SupplyChain from "../images/SupplyChain.jpg";
-import Nursery from "../images/Nursery.jpg";
+import FaceClassification from "../images/Project/Faceclassify.jpg";
+import Arthritis from "../images/Project/Arthritis.jpg";
+import Spellme from "../images/Project/spell Me.jpg";
+import Efarming from "../images/Project/EFarming.jpg";
+import SupplyChain from "../images/Project/SupplyChain.jpg";
+import Nursery from "../images/Project/Nursery.jpg";
 import img1 from "../images/IndexMedia/1.jpg";
 import img2 from "../images/IndexMedia/2.jpg";
 import img3 from "../images/IndexMedia/3.jpg";
