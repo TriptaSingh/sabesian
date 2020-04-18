@@ -47,6 +47,7 @@ export class App extends React.Component {
       }
     }
   }
+
   breadCrumbsLink() {
     const windowURL = window.location.href;
     const urlArr = windowURL.split("/");
@@ -125,30 +126,33 @@ export class App extends React.Component {
           <Route path="/media" component={MediaComponent}></Route>
           <Route path="/projects" component={ProjectComponent}></Route>
           <Route
-            path="/Project-FaceClassificationSystem"
+            path="/Project-Face Classification System"
             component={FaceCSComponent}
           ></Route>
           <Route
             path="/Project-Arthrocure"
             component={ArthrocureComponent}
           ></Route>
-          <Route path="/Project-SpellMe" component={SpellMeComponent}></Route>
-          <Route path="/Project-EFarming" component={EFarmingComponent}></Route>
+          <Route path="/Project-Spell Me" component={SpellMeComponent}></Route>
+          <Route
+            path="/Project-E-Farming"
+            component={EFarmingComponent}
+          ></Route>
           <Route path="/Project-Chatbot" component={ChatbotComponent}></Route>
           <Route
-            path="/Project-SupplyChainManagementSystem"
+            path="/Project-Supply Chain Management System"
             component={SupplyChainMSComponent}
           ></Route>
           <Route
-            path="/Project-NurseryManagementSystem"
+            path="/Project-Nursery Management System"
             component={NurseryMSComponent}
           ></Route>
           <Route
-            path="/Project-NanoProcessorDesign"
+            path="/Project-Nano Processor Design"
             component={NPDComponent}
           ></Route>
           <Route
-            path="/Project-NozamaWarriorGameSimulation"
+            path="/Project-Nozama Warrior Game Simulation"
             component={NWGSComponent}
           ></Route>
           <Route path="/" component={HomeComponent}></Route>
