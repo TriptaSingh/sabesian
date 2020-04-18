@@ -1,5 +1,5 @@
 import React from "react";
-import BlogMediumComponent from "./BlogMediumComponent";
+import BlogMediumComponent from "../components/BlogMediumComponent";
 import "../styles/Blog.scss";
 import "../styles/Site.scss";
 import data from "../static/staticData.json";
