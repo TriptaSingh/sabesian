@@ -1,34 +1,26 @@
 import React from "react";
-import FaceClassification from "../images/Project/Faceclassify.jpg";
-import Arthritis from "../images/Project/Arthritis.jpg";
-import Spellme from "../images/Project/spell Me.jpg";
-import Efarming from "../images/Project/EFarming.jpg";
-import Chatbot from "../images/Project/Chatbot.jpg";
-import SupplyChain from "../images/Project/SupplyChain.jpg";
-import Nursery from "../images/Project/Nursery.jpg";
-import NanoPro from "../images/Project/NanoPro.jpg";
-import Nozama from "../images/Project/Nozama.jpg";
-import { Link } from "react-router-dom";
 import data from "../static/staticData.json";
 import projectData from "../static/ProjectData.json";
 import ProjectCardComponent from "../components/ProjectCardComponent";
+import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 export class ProjectComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      pageType: props.pageType,
-    };
+
+  }
+  breadCrumbLinks() {
+    this.props.onHeaderClick();
   }
   addFilter(event) {
     const classN = event.target.id;
-    const projTypes = ["hackathon", "university", "business"];
-    console.log(classN);
+    const projTypes = Object.values(projectData.ProjectTypes);
+    
     if (!!classN) {
       for (const x in projTypes) {
         this.addStyle(projTypes[x], "none");
       }
     }
-    if (!!classN) {
+    if (!!classN && classN !== projectData.ProjectTypes.AllCategories) {
       this.addStyle(classN, "block");
     } else {
       for (const x in projTypes) {
@@ -45,7 +37,6 @@ export class ProjectComponent extends React.Component {
   }
 
   render() {
-    // console.log(projectData.Projects[0]);
     return (
       <section className="projects_area p_120">
         <div className="container">
@@ -55,32 +46,17 @@ export class ProjectComponent extends React.Component {
 
             <div className="projects_fillter">
               <ul className="filter list" onClick={this.addFilter.bind(this)}>
-                <li data-filter="*">
-                  <a href="#">{data.AllCategories}</a>
-                </li>
-                <li data-filter=".hackathon">
-                  <a href="#" id="hackathon">
-                    {data.Hackathon}
-                  </a>
-                </li>
-                <li data-filter=".university">
-                  <a href="#" id="university">
-                    {data.University}
-                  </a>
-                </li>
-                <li data-filter=".business">
-                  <a href="#" id="business">
-                    {data.Business}
-                  </a>
-                </li>
+                {Object.values(projectData.ProjectTypes).map((val, key) => {
+                  return (<ProjectCategoryComponent key={key} val={val}></ProjectCategoryComponent>)
+                })}
               </ul>
             </div>
           </div>
-          <div className="projects_inner row">
-            {projectData.Projects.reverse().map((details, key) => {
+          <div className="projects_inner row" onClick={this.breadCrumbLinks.bind(this)}>
+            {projectData.Projects.reverse().map((details, index) => {
               return (
                 <ProjectCardComponent
-                  key={key}
+                  key={index}
                   title={details.data.Title}
                   cardDescription={details.data.CardDescription}
                   category={details.data.Category}

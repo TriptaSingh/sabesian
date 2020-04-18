@@ -16,6 +16,15 @@ $dip: #222222;
   &::-moz-placeholder { @content; }
   &::-webkit-input-placeholder { @content; }
 }
+a input[type="button"]:hover {
+  text-decoration: none !important;
+}
+
+li {
+  a {
+  text-decoration: none !important;
+  }
+}
 .header_area{
     position: absolute;
     width: 100%;

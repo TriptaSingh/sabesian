@@ -28,6 +28,15 @@ $baseColor: #8490ff;
     @content;
   }
 }
+a input[type="button"]:hover {
+  text-decoration: none !important;
+}
+
+li {
+  a {
+  text-decoration: none !important;
+  }
+}
 .top-container {
   background-color: #f9f9ff;
   padding: 30px;
@@ -312,6 +321,7 @@ h6 {
   color: #fff;
   background: #4cd3e3;
   border: 1px solid transparent;
+  text-decoration: none;
 }
 
 .genric-btn.success:hover {
@@ -407,7 +417,7 @@ h6 {
 .genric-btn.link {
   color: #222222;
   background: #f9f9ff;
-  text-decoration: underline;
+  text-decoration: none;
   border: 1px solid transparent;
 }
 
@@ -421,7 +431,7 @@ h6 {
   color: #222222;
   border: 1px solid #f9f9ff;
   background: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .genric-btn.link-border:hover {
@@ -475,6 +485,7 @@ h6 {
 .banner_btn:hover {
   background-position: right center;
   color: #fff;
+  text-decoration: none;
 }
 //=======================================Media Are =======================//@extend
 

@@ -11,70 +11,6 @@ export class BreadCrumbsComponent extends React.Component {
       crumbUpdate: [],
     };
   }
-  createCrumbs() {
-    const windowURL = window.location.href;
-    const urlArr = windowURL.split("/");
-    const url = !!urlArr && urlArr.length > 0 ? urlArr.pop() : "";
-    const links = [
-      {
-        name: "Home",
-        click: "/home",
-      },
-    ];
-    switch (url) {
-      case "":
-      case "home":
-        break;
-      case "about": {
-        links.push({
-          name: "About Me",
-          click: "/about",
-        });
-        break;
-      }
-      case "blog": {
-        links.push({
-          name: "Blog",
-          click: "/blog",
-        });
-        break;
-      }
-      case "contact": {
-        links.push({
-          name: "Contact",
-          click: "/contact",
-        });
-        break;
-      }
-      case "media": {
-        links.push({
-          name: "Gallery",
-          click: "/media",
-        });
-        break;
-      }
-      case "projects": {
-        links.push({
-          name: "Project",
-          click: "/projects",
-        });
-        break;
-      }
-      default: {
-        links.push({
-          name: "Project",
-          click: "/projects",
-        });
-        links.push({
-          name: url.replace("Project-", ""),
-          click: url,
-        });
-        break;
-      }
-    }
-    this.setState({ crumbUpdate: links });
-  }
-
   render() {
     const pageName =
       this.props.breadCLinks.length > 0
@@ -100,7 +36,7 @@ export class BreadCrumbsComponent extends React.Component {
         </nav>
       </div>
     ) : (
-      <div className="top-container">
+      <div className="top-container" onClick={this.props.checkURL}>
         <nav className="breadcrumbs" aria-label="breadcrumb">
           <ol className="breadcrumb">
             <section className="home_banner_area">

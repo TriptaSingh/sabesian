@@ -1,17 +1,15 @@
 import React from "react";
 import data from "../static/staticData.json";
 import "../styles/Site.scss";
-import FaceClassification from "../images/Project/Faceclassify.jpg";
-import Arthritis from "../images/Project/Arthritis.jpg";
-import Spellme from "../images/Project/spell Me.jpg";
-import Efarming from "../images/Project/EFarming.jpg";
-import SupplyChain from "../images/Project/SupplyChain.jpg";
-import Nursery from "../images/Project/Nursery.jpg";
 import img1 from "../images/IndexMedia/1.jpg";
 import img2 from "../images/IndexMedia/2.jpg";
 import img3 from "../images/IndexMedia/3.jpg";
 import img4 from "../images/IndexMedia/4.jpg";
 import { Link } from "react-router-dom";
+import projectData from "../static/ProjectData.json";
+import ProjectCardComponent from "../components/ProjectCardComponent";
+import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
+
 export class HomeComponent extends React.Component {
   componentDidMount() {
     var widget = document.getElementById("medium-widget");
@@ -20,16 +18,20 @@ export class HomeComponent extends React.Component {
     }
   }
 
+  breadCrumbLinks() {
+    this.props.onHeaderClick();
+  }
+
   addFilter(event) {
     const classN = event.target.id;
-    const projTypes = ["hackathon", "university", "business"];
-    console.log(classN);
+    const projTypes = Object.values(projectData.ProjectTypes);
+    
     if (!!classN) {
       for (const x in projTypes) {
         this.addStyle(projTypes[x], "none");
       }
     }
-    if (!!classN) {
+    if (!!classN && classN !== projectData.ProjectTypes.AllCategories) {
       this.addStyle(classN, "block");
     } else {
       for (const x in projTypes) {
@@ -44,10 +46,13 @@ export class HomeComponent extends React.Component {
       all[i].style.display = styleTy;
     }
   }
+  breadCrumbLinks() {
+    this.props.onHeaderClick();
+  }
 
   render() {
     return (
-      <div>
+      <div onClick={this.breadCrumbLinks.bind(this)}>
         <section className="projects_area p_120">
           <div className="container">
             <div className="main_title">
@@ -56,143 +61,25 @@ export class HomeComponent extends React.Component {
             </div>
             <div className="projects_fillter">
               <ul className="filter list" onClick={this.addFilter.bind(this)}>
-                <li data-filter="*">
-                  <a href="#">{data.AllCategories}</a>
-                </li>
-                <li data-filter=".hackathon">
-                  <a href="#" id="hackathon">
-                    {data.Hackathon}
-                  </a>
-                </li>
-                <li data-filter=".university">
-                  <a href="#" id="university">
-                    {data.University}
-                  </a>
-                </li>
-                <li data-filter=".business">
-                  <a href="#" id="business">
-                    {data.Business}
-                  </a>
-                </li>
+              {Object.values(projectData.ProjectTypes).map((val, key) => {
+                  return (<ProjectCategoryComponent key={key} val={val}/>)
+                })}
               </ul>
             </div>
             <div className="projects_inner row">
-              <div className="col-lg-4 col-sm-6 brand university">
-                <div className="projects_item">
-                  <img className="img-fluid" src={FaceClassification} alt="" />
-                  <div className="projects_text">
-                    <Link
-                      className="nav-link"
-                      to="Project-Face Classification System"
-                    >
-                      <h4>
-                        <font color="#222222">{data.FCS}</font>
-                      </h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">
-                        {data.no5}
-                        <sup>
-                          <font color="#777777">{data.th}</font>
-                        </sup>
-                        {data.semesterProject}
-                      </font>
-                    </p>
-                  </div>
-                </div>
+            {projectData.Projects.reverse().map((details, index) => {
+              return index < 6 ? 
+               (
+                <ProjectCardComponent
+                  key={index}
+                  title={details.data.Title}
+                  cardDescription={details.data.CardDescription}
+                  category={details.data.Category}
+                  img={details.data.ImageURL}
+                />
+              ) :  null;
+            })}
               </div>
-              <div className="col-lg-4 col-sm-6 brand hackathon">
-                <div className="projects_item">
-                  <img className="img-fluid" src={Arthritis} alt="" />
-                  <div className="projects_text">
-                    <Link className="nav-link" to="Project-Arthrocure">
-                      <h4>{data.Arthrocure}</h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">{data.InnovationProject}</font>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6 business">
-                <div className="projects_item">
-                  <img className="img-fluid" src={Spellme} alt="" />
-                  <div className="projects_text">
-                    <Link className="nav-link" to="Project-SpellMe">
-                      <h4>
-                        <font color="#222222">{data.SpellMe}</font>
-                      </h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">{data.ClientProject}</font>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6 brand hackathon">
-                <div className="projects_item">
-                  <img className="img-fluid" src={Efarming} alt="" />
-                  <div className="projects_text">
-                    <Link className="nav-link" to="Project-EFarming">
-                      <h4>
-                        <font color="#222222">{data.EFarming}</font>
-                      </h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">{data.IoTProject}</font>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6 brand university">
-                <div className="projects_item">
-                  <img className="img-fluid" src={SupplyChain} alt="" />
-                  <div className="projects_text">
-                    <Link
-                      className="nav-link"
-                      to="Project-SupplyChainManagementSystem"
-                    >
-                      <h4>
-                        <font color="#222222">{data.SCMS}</font>
-                      </h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">
-                        {data.no4}
-                        <sup>
-                          <font color="#777777">{data.th}</font>
-                        </sup>{" "}
-                        {data.semesterProject}
-                      </font>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6 brand university">
-                <div className="projects_item">
-                  <img className="img-fluid" src={Nursery} alt="" />
-                  <div className="projects_text">
-                    <Link
-                      className="nav-link"
-                      to="Project-NurseryManagementSystem"
-                    >
-                      <h4>
-                        <font color="#222222">{data.NMS}</font>
-                      </h4>
-                    </Link>
-                    <p>
-                      <font color="#777777">
-                        3
-                        <sup>
-                          <font color="#777777">{data.rd}</font>
-                        </sup>{" "}
-                        {data.semesterProject}
-                      </font>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="row mt-4">
               <div className="col">
                 <div className="blogAside1">

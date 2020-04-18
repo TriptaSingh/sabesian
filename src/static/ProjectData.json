@@ -13,7 +13,7 @@
         "Title": "Nozama Warrior Game Simulation",
         "Category": "University",
         "CardDescription": "2nd semester Project",
-        "ImageURL": "../images/Project/Nozama.jpg",
+        "ImageURL": "/Docs/Project/Nozama.jpg",
         "Year": "2017",
         "Tools Used": {
           "Software": "Java"
@@ -28,7 +28,7 @@
         "Title": "Nano Processor Design",
         "Category": "University",
         "CardDescription": "2nd semester Project",
-        "ImageURL": "../images/Project/NanoPro.jpg",
+        "ImageURL": "/Docs/Project/NanoPro.jpg",
         "Year": "2017",
         "Tools Used": {
           "Software": "Xilinx ISE Design Suite",
@@ -44,7 +44,7 @@
         "Title": "Nursery Management System",
         "Category": "University",
         "CardDescription": "3rd semester Project",
-        "ImageURL": "../images/Project/Nursery.jpg",
+        "ImageURL": "/Docs/Project/Nursery.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "HTML, CSS, PHP, MySQL"
@@ -59,7 +59,7 @@
         "Title": "Supply Chain Management System",
         "Category": "University",
         "CardDescription": "4th semester Project",
-        "ImageURL": "../images/Project/SupplyChain.jpg",
+        "ImageURL": "/Docs/Project/SupplyChain.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "MySQL, Node.js"
@@ -74,7 +74,7 @@
         "Title": "Chatbot",
         "Category": "University",
         "CardDescription": "4th semester Project",
-        "ImageURL": "../images/Project/Chatbot.jpg",
+        "ImageURL": "/Docs/Project/Chatbot.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "Node.js, Watson API"
@@ -89,7 +89,7 @@
         "Title": "E-Farming",
         "Category": "Hackathon",
         "CardDescription": "IoT Project",
-        "ImageURL": "../images/Project/EFarming.jpg",
+        "ImageURL": "/Docs/Project/EFarming.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "HTML5 & CSS, PHP, MySQL",
@@ -105,7 +105,7 @@
         "Title": "Spell Me",
         "Category": "Business",
         "CardDescription": "Client Project",
-        "ImageURL": "../images/Project/spell Me.jpg",
+        "ImageURL": "/Docs/Project/spell Me.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "HUnity3D - game Engine using C# script",
@@ -121,7 +121,7 @@
         "Title": "Arthrocure",
         "Category": "Hackathon",
         "CardDescription": "Innovation",
-        "ImageURL": "../images/Project/Arthritis.jpg",
+        "ImageURL": "/Docs/Project/Arthritis.jpg",
         "Year": "2018",
         "Tools Used": {
           "Software": "Unity3D - game Engine using C# script",
@@ -137,7 +137,7 @@
         "Title": "Face Classification System",
         "Category": "University",
         "CardDescription": "5th semester Project",
-        "ImageURL": "../images/Project/Faceclassify.jpg",
+        "ImageURL": "/Docs/Project/Faceclassify.jpg",
         "Year": "2019",
         "Tools Used": {
           "Software": "Android Studio"

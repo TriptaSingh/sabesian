@@ -32,6 +32,10 @@ $dip: #222222;
     padding: 0 5px;
 }
 
+a input[type="button"]:hover {
+  text-decoration: none !important;
+}
+
 .breadcrumb {
     background-color: #f9f9ff !important;
     display: block !important;
@@ -41,6 +45,7 @@ $dip: #222222;
             font-size: 14px;
             color: #777777;
             font-family: 'Roboto', sans-serif;
+            text-decoration: none !important;
         }
     }
 }
@@ -113,6 +118,7 @@ $dip: #222222;
                 font-size: 13px;
                 font-family: $rob;
                 font-weight: 500;
+                text-decoration: none;
                 @include transition;
                 &:hover{
                     background-position: right center;

@@ -23,6 +23,15 @@ h6 {
   font-size: 14px;
 }
 
+a input[type="button"]:hover {
+  text-decoration: none !important;
+}
+
+li {
+  a {
+  text-decoration: none !important;
+  }
+}
 $dip: #222222;
 $pfont: #777777;
 $rob: "Roboto", sans-serif;

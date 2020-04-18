@@ -8,16 +8,11 @@ export default function ProjectCardComponent({
   category,
   img,
 }) {
-  let a = [];
-  a.push(img);
-
-  console.log(a);
-  console.log("koopa");
-
+  const imgSrc = window.location.origin + img;
   return (
     <div className={`col-lg-4 col-sm-6 ${category}`}>
       <div className="projects_item">
-        <img className="img-fluid" src={require(img)} alt="" />
+        <img className="img-fluid" src={imgSrc} alt="" />
         <div className="projects_text">
           <Link className="nav-link" to={`Project-${title}`}>
             <h4>{title}</h4>
