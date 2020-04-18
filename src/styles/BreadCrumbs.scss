@@ -26,6 +26,19 @@ $dip: #222222;
   &::-moz-placeholder { @content; }
   &::-webkit-input-placeholder { @content; }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .box_1620 {
+    max-width: 1650px;
+    margin: auto;
+  }
+}
 .breadcrumb > li + li:before {
     // color: #ccc;
     content: "\2192 " !important;

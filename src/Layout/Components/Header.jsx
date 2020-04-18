@@ -82,9 +82,6 @@ export default class HeaderComponent extends React.Component {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                {/* <span><i className="fa fa-bars"></i></span> */}
-                {/* <span><i className="fa fa-bars"></i></span>
-                                    <span><i className="fa fa-bars"></i></span> */}
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>

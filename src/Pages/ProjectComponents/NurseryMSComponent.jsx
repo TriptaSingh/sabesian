@@ -1,7 +1,8 @@
 import React from "react";
-import Nursery from "../../images/Project/Nursery.jpg";
 import data from "../../static/staticData.json";
 export const NurseryMSComponent = () => {
+const Nursery  = window.location.origin + "/Docs/Project/Nursery.jpg";
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

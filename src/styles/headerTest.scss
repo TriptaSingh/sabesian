@@ -20,6 +20,19 @@ a input[type="button"]:hover {
   text-decoration: none !important;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .box_1620 {
+    max-width: 1650px;
+    margin: auto;
+  }
+}
+
 li {
   a {
   text-decoration: none !important;
@@ -46,6 +59,8 @@ li {
                     color: $dip;
                     padding: 0px; 
                     display: inline-block;
+                    font-weight: bold;
+                    background-color:transparent;
                     &:after{
                         display: none;
                     }
@@ -113,7 +128,7 @@ li {
                             }
                             &:hover{
                                 .nav-link{
-									background: $baseColor;
+									                  background: $baseColor;
                                     color: #fff;
                                 }
                             }    
@@ -408,6 +423,13 @@ li {
       flex: 0 0 100% !important;
     }
   }
+
+  @media (min-width: 768px){
+  #navbarSupportedContent {
+    // margin-left: 500px;
+    display: flex !important;
+  }
+}
 
   @media (max-width: 1619px) {
   /* Main Menu Area css
@@ -806,14 +828,14 @@ li {
 
 /* Medium Widget Area css
 	============================================================================================ */
-@media (max-width: 768px) {
-  .medium-widget-article__row {
-    flex-wrap: wrap;
-  }
-  .medium-widget-article__item {
-    flex: 0 0 100% !important;
-  }
-}
+// @media (max-width: 768px) {
+//   .medium-widget-article__row {
+//     flex-wrap: wrap;
+//   }
+//   .medium-widget-article__item {
+//     flex: 0 0 100% !important;
+//   }
+// }
 
 /* End Medium Widget Area css
 	============================================================================================ */

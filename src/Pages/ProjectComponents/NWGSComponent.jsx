@@ -1,9 +1,10 @@
 import React from "react";
-import Nozama from "../../images/Project/Nozama.jpg";
 import pdf from "../../images/Icons/pdf.svg";
 import NWGSProjectDescription from "../../Docs/NWGSProjectDescription.pdf";
 import data from "../../static/staticData.json";
 export const NWGSComponent = () => {
+const Nozama  = window.location.origin + "/Docs/Project/Nozama.jpg";
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

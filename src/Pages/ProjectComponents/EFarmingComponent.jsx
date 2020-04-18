@@ -1,9 +1,9 @@
 import React from "react";
-import EFarming from "../../images/Project/EFarming.jpg";
 import ppt from "../../images/Icons/ppt.png";
 import data from "../../static/staticData.json";
 import EFarmingFile from "../../Docs/EFarming.pptx";
 export const EFarmingComponent = () => {
+const EFarming = window.location.origin + "/Docs/Project/EFarming.jpg";
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

@@ -1,9 +1,9 @@
 import React from "react";
-import Arthritis from "../../images/Project/Arthritis.jpg";
 import ppt from "../../images/Icons/ppt.png";
 import data from "../../static/staticData.json";
 import ArthroCure from "../../Docs/ArthroCure.pptx";
 export const ArthrocureComponent = () => {
+  const imgPath = '/Docs/Project/Arthritis.jpg';
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
@@ -11,7 +11,7 @@ export const ArthrocureComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={Arthritis} alt="" />
+                <img className="img-fluid" src={window.location.origin + imgPath} alt="" />
               </div>
             </div>
             <div className="col-md-6">
