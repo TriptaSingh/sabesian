@@ -10,7 +10,8 @@ import NanoPro from "../images/Project/NanoPro.jpg";
 import Nozama from "../images/Project/Nozama.jpg";
 import { Link } from "react-router-dom";
 import data from "../static/staticData.json";
-
+import projectData from "../static/ProjectData.json";
+import ProjectCardComponent from "../components/ProjectCardComponent";
 export class ProjectComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -44,6 +45,7 @@ export class ProjectComponent extends React.Component {
   }
 
   render() {
+    // console.log(projectData.Projects[0]);
     return (
       <section className="projects_area p_120">
         <div className="container">
@@ -75,165 +77,17 @@ export class ProjectComponent extends React.Component {
             </div>
           </div>
           <div className="projects_inner row">
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={FaceClassification} alt="" />
-                <div className="projects_text">
-                  <Link
-                    className="nav-link"
-                    to="Project-FaceClassificationSystem"
-                  >
-                    <h4>{data.FCS}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      {data.no5}
-                      <sup>
-                        <font color="#777777">{data.th}</font>
-                      </sup>
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 hackathon">
-              <div className="projects_item">
-                <img className="img-fluid" src={Arthritis} alt="" />
-                <div className="projects_text">
-                  <Link className="nav-link" to="Project-Arthrocure">
-                    <h4>{data.Arthrocure}</h4>
-                  </Link>
-                  <p>{data.InnovationProject}</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 business">
-              <div className="projects_item">
-                <img className="img-fluid" src={Spellme} alt="" />
-                <div className="projects_text">
-                  <Link className="nav-link" to="Project-SpellMe">
-                    <h4>{data.SpellMe}</h4>
-                  </Link>
-                  <p>{data.ClientProject}</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 hackathon">
-              <div className="projects_item">
-                <img className="img-fluid" src={Efarming} alt="" />
-                <div className="projects_text">
-                  <Link className="nav-link" to="Project-EFarming">
-                    <h4>{data.EFarming}</h4>
-                  </Link>
-                  <p>{data.IoTProject}</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={Chatbot} alt="" />
-                <div className="projects_text">
-                  <Link className="nav-link" to="Project-Chatbot">
-                    <h4>{data.Chatbot}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      {data.no4}
-                      <sup>
-                        <font color="#777777">{data.th}</font>
-                      </sup>{" "}
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={SupplyChain} alt="" />
-                <div className="projects_text">
-                  <Link
-                    className="nav-link"
-                    to="Project-SupplyChainManagementSystem"
-                  >
-                    <h4>{data.SCMS}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      {data.no4}
-                      <sup>
-                        <font color="#777777">{data.th}</font>
-                      </sup>{" "}
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={Nursery} alt="" />
-                <div className="projects_text">
-                  <Link
-                    className="nav-link"
-                    to="Project-NurseryManagementSystem"
-                  >
-                    <h4>{data.NMS}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      3
-                      <sup>
-                        <font color="#777777">{data.rd}</font>
-                      </sup>{" "}
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={NanoPro} alt="" />
-                <div className="projects_text">
-                  <Link className="nav-link" to="Project-NanoProcessorDesign">
-                    <h4>{data.NPD}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      2
-                      <sup>
-                        <font color="#777777">{data.nd}</font>
-                      </sup>{" "}
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 university">
-              <div className="projects_item">
-                <img className="img-fluid" src={Nozama} alt="" />
-                <div className="projects_text">
-                  <Link
-                    className="nav-link"
-                    to="Project-NozamaWarriorGameSimulation"
-                  >
-                    <h4>{data.NWGS}</h4>
-                  </Link>
-                  <p>
-                    <font color="#777777">
-                      2
-                      <sup>
-                        <font color="#777777">{data.nd}</font>
-                      </sup>{" "}
-                      {data.semesterProject}
-                    </font>
-                  </p>
-                </div>
-              </div>
-            </div>
+            {projectData.Projects.reverse().map((details, key) => {
+              return (
+                <ProjectCardComponent
+                  key={key}
+                  title={details.data.Title}
+                  cardDescription={details.data.CardDescription}
+                  category={details.data.Category}
+                  img={details.data.ImageURL}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

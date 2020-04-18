@@ -83,7 +83,7 @@ export class HomeComponent extends React.Component {
                   <div className="projects_text">
                     <Link
                       className="nav-link"
-                      to="Project-FaceClassificationSystem"
+                      to="Project-Face Classification System"
                     >
                       <h4>
                         <font color="#222222">{data.FCS}</font>
