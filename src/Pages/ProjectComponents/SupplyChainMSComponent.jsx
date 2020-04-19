@@ -1,9 +1,10 @@
 import React from "react";
-import SupplyChain from "../../images/Project/SupplyChain.jpg";
 import pdf from "../../images/Icons/pdf.svg";
 import SupplyChainManagement from "../../Docs/SupplyChainManagement.pdf";
 import data from "../../static/staticData.json";
 export const SupplyChainMSComponent = () => {
+const SupplyChain  = window.location.origin + "/Docs/Project/SupplyChain.jpg";
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

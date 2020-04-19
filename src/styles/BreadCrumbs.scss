@@ -26,10 +26,27 @@ $dip: #222222;
   &::-moz-placeholder { @content; }
   &::-webkit-input-placeholder { @content; }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .box_1620 {
+    max-width: 1650px;
+    margin: auto;
+  }
+}
 .breadcrumb > li + li:before {
     // color: #ccc;
     content: "\2192 " !important;
     padding: 0 5px;
+}
+
+a input[type="button"]:hover {
+  text-decoration: none !important;
 }
 
 .breadcrumb {
@@ -41,6 +58,7 @@ $dip: #222222;
             font-size: 14px;
             color: #777777;
             font-family: 'Roboto', sans-serif;
+            text-decoration: none !important;
         }
     }
 }
@@ -113,6 +131,7 @@ $dip: #222222;
                 font-size: 13px;
                 font-family: $rob;
                 font-weight: 500;
+                text-decoration: none;
                 @include transition;
                 &:hover{
                     background-position: right center;

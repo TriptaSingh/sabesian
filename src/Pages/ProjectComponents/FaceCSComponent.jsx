@@ -1,5 +1,4 @@
 import React from "react";
-import FaceCS from "../../images/Project/Faceclassify.jpg";
 import pdf from "../../images/Icons/pdf.svg";
 import "../../styles/Project.scss";
 import data from "../../static/staticData.json";
@@ -11,6 +10,8 @@ import Test_plan from "../../Docs/Test_plan.pdf";
 import Final_Report from "../../Docs/Final_Report.pdf";
 
 export const FaceCSComponent = () => {
+const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

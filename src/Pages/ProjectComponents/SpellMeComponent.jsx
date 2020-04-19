@@ -1,10 +1,11 @@
 import React from "react";
-import SpellMe from "../../images/Project/spell Me.jpg";
 import ppt from "../../images/Icons/ppt.png";
 import SpellMeFile from "../../Docs/SpellMe.pptx";
 import data from "../../static/staticData.json";
 
 export const SpellMeComponent = () => {
+const SpellMe  = window.location.origin + "/Docs/Project/spell Me.jpg";
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

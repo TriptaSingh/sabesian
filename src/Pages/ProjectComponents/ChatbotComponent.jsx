@@ -1,8 +1,8 @@
 import React from "react";
-import Chatbot from "../../images/Project/Chatbot.jpg";
 import data from "../../static/staticData.json";
 
 export const ChatbotComponent = () => {
+  const Chatbot = window.location.origin + '/Docs/Project/Chatbot.jpg' ;
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">

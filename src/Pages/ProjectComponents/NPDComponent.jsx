@@ -1,10 +1,11 @@
 import React from "react";
-import NanoPro from "../../images/Project/NanoPro.jpg";
 import pdf from "../../images/Icons/pdf.svg";
 import data from "../../static/staticData.json";
 import ProjectDescription from "../../Docs/ProjectDescription.pdf";
 import Report from "../../Docs/Report.pdf";
 export const NPDComponent = () => {
+const NanoPro  = window.location.origin + "/Docs/Project/NanoPro.jpg";
+  
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
