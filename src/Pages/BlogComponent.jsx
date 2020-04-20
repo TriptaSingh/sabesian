@@ -1,8 +1,7 @@
 import React from "react";
-import BlogMediumComponent from "../components/BlogMediumComponent";
-import "../styles/Blog.scss";
 import "../styles/Site.scss";
 import data from "../static/staticData.json";
+import Slider from "../components/Slider";
 
 export class BlogComponent extends React.Component {
   componentDidMount() {
@@ -53,7 +52,7 @@ export class BlogComponent extends React.Component {
                       {data.Blog3} <i className="fas fa-newspaper-o"></i>
                     </a>
                   </div>
-                  <BlogMediumComponent />
+                  <Slider />
 
                   <ul
                     id="pagin"
