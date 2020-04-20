@@ -1,8 +1,10 @@
 import React from "react";
-import data from "../../static/staticData.json";
-export const NurseryMSComponent = () => {
-const Nursery  = window.location.origin + "/Docs/Project/Nursery.jpg";
+import projectDetails from "../../static/ProjectData.json";
 
+export const NurseryMSComponent = () => {
+  const Nursery = window.location.origin + "/Docs/Project/Nursery.jpg";
+  const PageDatails = projectDetails.Projects[2].data;
+  const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
@@ -15,33 +17,43 @@ const Nursery  = window.location.origin + "/Docs/Project/Nursery.jpg";
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.NMS}</h4>
-                <p>
-                  {data.NMST1}
-                  <sup>
-                    <font color="#777777">{data.rd}</font>
-                  </sup>
-                  {data.NMST2}
-                </p>
+                <h4>{PageDatails.Title}</h4>
+                <p className="alignText">{PageDatails.ProjectIntro}</p>
                 <ul className="list">
                   <li>
-                    <span>{data.Year}</span>: {data.numYR}
+                    <span>Year</span>: {PageDatails.Year}
                   </li>
+                  {PageDatails["Tools Used"] ? (
+                    <li>
+                      <span>
+                        <h5>Tools Used</h5>
+                      </span>
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Software ? (
+                    <li>
+                      <span>Software</span>:{" "}
+                      {PageDatails["Tools Used"].Software}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Hardware ? (
+                    <li>
+                      <span>Hardware</span>:{" "}
+                      {PageDatails["Tools Used"].Hardware}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Environment ? (
+                    <li>
+                      <span>Environment</span>:{" "}
+                      {PageDatails["Tools Used"].Environment}
+                    </li>
+                  ) : null}
+                  {/* Start Document */}
                   <li>
                     <span>
-                      <h5>{data.ToolsUsed}</h5>
+                      <h5>Project</h5>
                     </span>
-                  </li>
-                  <li>
-                    <span>{data.Software}</span>
-                    {data.NMST3}
-                  </li>
-                  <li></li>
-                  <li>
-                    <span>
-                      <h5>{data.Project}</h5>
-                    </span>
-                    {data.ChatbotT4}
+                    : Click the icon to watch the project
                   </li>
                   <a
                     href="https://github.com/sabesansathananthan/Nursery_Management"
@@ -51,12 +63,16 @@ const Nursery  = window.location.origin + "/Docs/Project/Nursery.jpg";
                       <i className="fab fa-github-square customSize"></i>
                     </font>
                   </a>
+                  {/* End Document */}
                 </ul>
               </div>
             </div>
           </div>
-          <p>{data.NMST4}</p>
-          <p>{data.NMST5}</p>
+          {parts.map((p, key) => (
+            <p className="alignText" key={key}>
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>
