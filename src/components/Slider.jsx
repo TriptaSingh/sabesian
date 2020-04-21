@@ -17,7 +17,7 @@ class Slider extends React.Component {
     fetch(this.mediumURL)
       .then((res) => res.json())
       .then((data) => {
-        // create two-dimensional array with 3 elements per inner array
+        // create two-dimensional array with 2 elements per inner array
         const avatar = data.feed.image;
         const profileLink = data.feed.link;
         const res = data.items; //This is an array with the content. No feed, no info about author etc..
