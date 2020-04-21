@@ -1,26 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import '../../styles/Header.scss';
 import Logo from "../../images/logo.png";
 import data from "../../static/staticData.json";
-import ReactModal from "react-modal";
 import "../../styles/headerTest.scss";
-
-// const ProjectListPopup = (props) => {
-//     return (
-//         <div className="projLi" onMouseLeave={() => props.close()} onClick={() => props.close()} >
-//             <Link className="nav-link" to="Project-FaceClassificationSystem">Face Classification System</Link>
-//             <Link className="nav-link" to="Project-Arthrocure">Arthrocure</Link>
-//             <Link className="nav-link" to="Project-SpellMe">Spell Me</Link>
-//             <Link className="nav-link" to="Project-EFarming">E-Farming</Link>
-//             <Link className="nav-link" to="Project-Chatbot">Chatbot</Link>
-//             <Link className="nav-link" to="Project-SupplyChainManagementSystem">Supply Chain Management System</Link>
-//             <Link className="nav-link" to="Project-NurseryManagementSystem">Nursery Management System</Link>
-//             <Link className="nav-link" to="Project-NanoProcessorDesign">Nano Processor Design</Link>
-//             <Link className="nav-link" to="Project-NozamaWarriorGameSimulation">Nozama Warrior Game Simulation</Link>
-//         </div>
-//     )
-// }
 
 export default class HeaderComponent extends React.Component {
   constructor(props) {
@@ -39,7 +21,6 @@ export default class HeaderComponent extends React.Component {
     this.setState({ showProjects: true });
   }
   breadCrumbLinks() {
-    // this.setState({breadCrumbs: links});
     this.props.onHeaderClick();
   }
 
@@ -48,156 +29,53 @@ export default class HeaderComponent extends React.Component {
     this.breadCrumbLinks();
   }
   render() {
-    const customStyles = {
-      content: {
-        top: "40%",
-        left: "75%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-        borderRadius: "0px",
-        padding: "0px",
-        overlay: { opacity: 1 },
-        boxShadow: "0px 3px 16px 0px rgba(0, 0, 0, 0.1)",
-      },
-    };
     return (
-      <header className="header_area" id="myHeader">
-        <div className="main_menu" id="mainNav">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <div
-              className="container box_1620"
-              onClick={this.breadCrumbLinks.bind(this)}
-            >
-              <Link className="navbar-brand logo_h" to="/home">
-                <img src={Logo} alt="" />
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-              <div
-                className="collapse navbar-collapse offset"
-                id="navbarSupportedContent"
-              >
-                <ul className="nav navbar-nav menu_nav ml-auto">
-                  <li className="nav-item active">
-                    <Link className="nav-link" to="/home">
-                      {data.Home}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/about">
-                      {data.About}
-                    </Link>
-                  </li>
-                  <li className="nav-item submenu dropdown">
-                    <Link
-                      to="/projects"
-                      id="projectPopup"
-                      className="nav-link dropdown-toggle"
-                      data-toggle="dropdown"
-                      role="button"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      // onMouseOver={this.projectsList.bind(this)}
-                    >
-                      {data.Projects}
-                    </Link>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link"
-                          to="Project-Face Classification System"
-                        >
-                          Face Classification System
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="Project-Arthrocure">
-                          Arthrocure
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="Project-Spell Me">
-                          Spell Me
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="Project-E-Farming">
-                          E-Farming
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="Project-Chatbot">
-                          Chatbot
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link"
-                          to="Project-Supply Chain Management System"
-                        >
-                          Supply Chain Management System
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link"
-                          to="Project-Nursery Management System"
-                        >
-                          Nursery Management System
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link"
-                          to="Project-Nano Processor Design"
-                        >
-                          Nano Processor Design
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link"
-                          to="Project-Nozama Warrior Game Simulation"
-                        >
-                          Nozama Warrior Game Simulation
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/blog">
-                      {data.Blog}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/media">
-                      {data.Media}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/contact">
-                      {data.Contact}
-                    </Link>
+      <section className="navigation">
+        <div className="nav-container" onClick={this.breadCrumbLinks.bind(this)}>
+          <div className="brand">
+          <Link to="/home"><img src={Logo} alt="" /></Link>
+          </div>
+          <nav>
+            <div className="nav-mobile">
+              <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <ul className="nav-list">
+              <li><Link to="/home">{data.Home}</Link></li>
+              <li><Link to="/about">{data.About}</Link></li>
+              <li><Link to="#">{data.Projects}</Link>
+                <ul className="nav-dropdown">
+                  <li><Link to="Project-Face Classification System">Face Classification System</Link></li>
+                  <li><Link to="Project-Arthrocure">Arthrocure</Link></li>
+                  <li><Link to="Project-Spell Me">Spell Me</Link></li>
+                  <li><Link to="Project-E-Farming">E-Farming</Link></li>
+                  <li><Link to="Project-Chatbot">Chatbot</Link></li>
+                  <li><Link to="Project-Supply Chain Management System">Supply Chain Management System</Link></li>
+                  <li><Link to="Project-Nursery Management System">Nursery Management System</Link></li>
+                  <li><Link to="Project-Nano Processor Design">Nano Processor Design</Link></li>
+                  <li><Link to="Project-Nozama Warrior Game Simulation">Nozama Warrior Game Simulation</Link>
                   </li>
                 </ul>
-              </div>
-            </div>
+              </li>
+              <li>
+                <Link to="/blog">
+                  {data.Blog}
+                </Link>
+              </li>
+              <li>
+                <Link to="/media">
+                  {data.Media}
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  {data.Contact}
+                </Link>
+              </li>
+            </ul>
           </nav>
+
         </div>
-      </header>
+      </section>
     );
   }
 }
