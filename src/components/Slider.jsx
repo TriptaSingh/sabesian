@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "shards-react";
 import MediumCard from "./MediumCard";
 import "../styles/shards-dashboards.1.1.0.min.css";
+import blogData from "../static/BlogData.json";
 
 // wrapper for items
 
@@ -10,8 +11,7 @@ class Slider extends React.Component {
     super(props);
     this.state = { itemRows: [], avatar: "", profileLink: "" };
   }
-  mediumURL =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Sabesan96";
+  mediumURL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${blogData.MediumUserName}`;
 
   componentDidMount() {
     fetch(this.mediumURL)

@@ -893,3 +893,24 @@ h6 {
     text-decoration: none;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .medium-widget-article__row {
+    display: block;
+  }
+  .carousel-inner {
+    max-height: 180px;
+  }
+}
+
+@media only screen and (min-device-width : 768px)   
+and (max-device-width : 1007px) //for tablet
+{
+  .carousel-inner {
+    max-height: 350px;
+}
+}
+
+.carousel-inner {
+  max-width: 1200px; max-height:600px
+}
