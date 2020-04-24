@@ -123,7 +123,15 @@ export class App extends React.Component {
           <Route path="/blog" component={BlogComponent}></Route>
           <Route path="/contact" component={ContactComponent}></Route>
           <Route path="/media" component={MediaComponent}></Route>
-          <Route path="/projects" render={(props) => <ProjectComponent onHeaderClick={this.breadCrumbsLink.bind(this)} {...props}/>}></Route>
+          <Route
+            path="/projects"
+            render={(props) => (
+              <ProjectComponent
+                onHeaderClick={this.breadCrumbsLink.bind(this)}
+                {...props}
+              />
+            )}
+          ></Route>
           <Route
             path="/Project-Face Classification System"
             component={FaceCSComponent}
@@ -154,7 +162,12 @@ export class App extends React.Component {
             path="/Project-Nozama Warrior Game Simulation"
             component={NWGSComponent}
           ></Route>
-          <Route path="/" render={(props) => <HomeComponent onHeaderClick={this.breadCrumbsLink.bind(this)}/>}></Route>
+          <Route
+            path="/"
+            render={(props) => (
+              <HomeComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
+            )}
+          ></Route>
         </Switch>
         <Footer />
       </BrowserRouter>
