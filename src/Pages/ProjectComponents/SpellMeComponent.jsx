@@ -1,10 +1,12 @@
 import React from "react";
 import ppt from "../../images/Icons/ppt.png";
 import SpellMeFile from "../../Docs/SpellMe.pptx";
-import data from "../../static/staticData.json";
+import projectDetails from "../../static/ProjectData.json";
 
 export const SpellMeComponent = () => {
-const SpellMe  = window.location.origin + "/Docs/Project/spell Me.jpg";
+  const SpellMe = window.location.origin + "/Docs/Project/spell Me.jpg";
+  const PageDatails = projectDetails.Projects[6].data;
+  const parts = PageDatails.Description.split("\n");
 
   return (
     <section className="portfolio_details_area p_120">
@@ -18,30 +20,43 @@ const SpellMe  = window.location.origin + "/Docs/Project/spell Me.jpg";
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.SpellMe}</h4>
-                <p>{data.SpellMe1}</p>
+                <h4>{PageDatails.Title}</h4>
+                <p className="alignText">{PageDatails.ProjectIntro}</p>
                 <ul className="list">
                   <li>
-                    <span>{data.Year}</span>: {data.numYR18}
+                    <span>Year</span>: {PageDatails.Year}
                   </li>
+                  {PageDatails["Tools Used"] ? (
+                    <li>
+                      <span>
+                        <h5>Tools Used</h5>
+                      </span>
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Software ? (
+                    <li>
+                      <span>Software</span>:{" "}
+                      {PageDatails["Tools Used"].Software}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Hardware ? (
+                    <li>
+                      <span>Hardware</span>:{" "}
+                      {PageDatails["Tools Used"].Hardware}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Environment ? (
+                    <li>
+                      <span>Environment</span>:{" "}
+                      {PageDatails["Tools Used"].Environment}
+                    </li>
+                  ) : null}
+                  {/* Start Document */}
                   <li>
                     <span>
-                      <h5>{data.ToolsUsed}</h5>
+                      <h5>Documents</h5>
                     </span>
-                  </li>
-                  <li>
-                    <span>{data.Software}</span>
-                    {data.SpellMe2}
-                  </li>
-                  <li>
-                    <span>{data.Environment}</span>
-                    {data.SpellMe3}
-                  </li>
-                  <li>
-                    <span>
-                      <h5>{data.Documents}</h5>
-                    </span>
-                    {data.ArthrocureT4}
+                    : Click the icon to Download Documents
                   </li>
                   <div className="social_widget">
                     <ul className="list">
@@ -57,20 +72,18 @@ const SpellMe  = window.location.origin + "/Docs/Project/spell Me.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.Presentation}</font>
+                            <font size="1">Presentation</font>
                           </figcaption>
                         </figure>
                       </li>
                     </ul>
                   </div>
-
                   <li>
                     <span>
-                      <h5>{data.Article}</h5>
+                      <h5>Article</h5>
                     </span>
-                    {data.ArticleRead}
+                    : Click the icon to read related article
                   </li>
-
                   <a
                     href="https://medium.com/datadriveninvestor/edutainment-game-spell-me-66fb21fb1b80"
                     target="_blank"
@@ -80,20 +93,16 @@ const SpellMe  = window.location.origin + "/Docs/Project/spell Me.jpg";
                       style={{ color: "black" }}
                     ></i>
                   </a>
+                  {/* End Document */}
                 </ul>
               </div>
             </div>
           </div>
-          <p className="alignText">
-            {data.SpellMe4}
-            <font color="#222222">{data.DialogGameHunt} </font>
-            {data.SpellMe5}
-          </p>
-          <p className="alignText">
-            {data.SpellMe6}
-            <br />
-            {data.SpellMe7}
-          </p>
+          {parts.map((p, key) => (
+            <p className="alignText" key={key}>
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>

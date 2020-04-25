@@ -1,8 +1,11 @@
 import React from "react";
-import data from "../../static/staticData.json";
+import projectDetails from "../../static/ProjectData.json";
 
 export const ChatbotComponent = () => {
-  const Chatbot = window.location.origin + '/Docs/Project/Chatbot.jpg' ;
+  const Chatbot = window.location.origin + "/Docs/Project/Chatbot.jpg";
+  const PageDatails = projectDetails.Projects[4].data;
+  const parts = PageDatails.Description.split("\n");
+
   return (
     <section className="portfolio_details_area p_120">
       <div className="container">
@@ -15,32 +18,43 @@ export const ChatbotComponent = () => {
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.Chatbot}</h4>
-                <p>
-                  {data.ChatbotT1}
-                  <sup>
-                    <font color="#777777">{data.th}</font>
-                  </sup>
-                  {data.ChatbotT2}
-                </p>
+                <h4>{PageDatails.Title}</h4>
+                <p className="alignText">{PageDatails.ProjectIntro}</p>
                 <ul className="list">
                   <li>
-                    <span>{data.Year}</span>: {data.numYR}
+                    <span>Year</span>: {PageDatails.Year}
                   </li>
+                  {PageDatails["Tools Used"] ? (
+                    <li>
+                      <span>
+                        <h5>Tools Used</h5>
+                      </span>
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Software ? (
+                    <li>
+                      <span>Software</span>:{" "}
+                      {PageDatails["Tools Used"].Software}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Hardware ? (
+                    <li>
+                      <span>Hardware</span>:{" "}
+                      {PageDatails["Tools Used"].Hardware}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Environment ? (
+                    <li>
+                      <span>Environment</span>:{" "}
+                      {PageDatails["Tools Used"].Environment}
+                    </li>
+                  ) : null}
+                  {/* Start Document */}
                   <li>
                     <span>
-                      <h5>{data.ToolsUsed}</h5>
+                      <h5>Project</h5>
                     </span>
-                  </li>
-                  <li>
-                    <span>{data.Software}</span>
-                    {data.ChatbotT3}
-                  </li>
-                  <li>
-                    <span>
-                      <h5>{data.Project}</h5>
-                    </span>
-                    {data.ChatbotT4}
+                    : Click the icon to watch the project
                   </li>
                   <a
                     href="https://github.com/sabesansathananthan/chatbot"
@@ -50,12 +64,16 @@ export const ChatbotComponent = () => {
                       <i className="fab fa-github-square customSize"></i>
                     </font>
                   </a>
+                  {/* End Document */}
                 </ul>
               </div>
             </div>
           </div>
-          <p className="alignText">{data.ChatbotT5}</p>
-          <p className="alignText">{data.ChatbotT6}</p>
+          {parts.map((p, key) => (
+            <p className="alignText" key={key}>
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>
