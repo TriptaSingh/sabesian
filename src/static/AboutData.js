@@ -11,25 +11,29 @@ export default {
     "I'm currently working in Sysco LABS (PVT) LTD as an Intern-Software Engineer, Towards Data Science as a Writer, and as a Game Developer for Dialog Gaming",
   EmploymentDetails: [
     {
-      companyName: "Towards Data Science",
+      CompanyName: "Towards Data Science",
+      Position: "Technical Writer",
       Description:
         "Technical Writer @ Toward Data Science. Towards Data Science provides a platform for thousands of people to exchange ideas in Medium.com",
       Icon: "flaticon-sketch",
     },
     {
-      companyName: "Dialog Gaming",
+      CompanyName: "Dialog Gaming",
+      Position: "Game Developer",
       Description:
         "Game Developer @ Dialog Gaming. Here I am creating and developing an Android mobile educational game which is titled: Spell Me.",
       Icon: "flaticon-skyline",
     },
     {
-      companyName: "Sysco LABS",
+      CompanyName: "Sysco LABS",
+      Position: "Intern-Software Engineer",
       Description:
         "Worked as an intern-software engineer in the food services domain primarily working on a project facilitating interaction between the business and external vendors. Gained experience in full stack development, test scenarios, test case writing with React Js, TypeScript, Redux-Saga, Jest, Enzyme, Chai, Mocha and Java.",
       Icon: "flaticon-city",
     },
     {
-      companyName: "Hatchyard",
+      CompanyName: "Hatchyard",
+      Position: "Software Engineer Intern",
       Description: "Intern-Software engineer @ Hatchyard (Private) LTD",
       Icon: "flaticon-skyline",
     },
