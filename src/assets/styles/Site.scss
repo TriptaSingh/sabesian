@@ -703,6 +703,9 @@ h6 {
       margin-bottom: 0px;
       font-size: 14px;
     }
+    a {
+      padding: 0rem;
+    }
   }
   &:hover {
     &:before {
@@ -826,6 +829,7 @@ h6 {
       color: $dip;
       a {
         color: $dip;
+        text-decoration: none;
       }
     }
     p {

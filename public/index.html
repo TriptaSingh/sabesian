@@ -96,6 +96,9 @@
       $('#nav-toggle').click(function () {
         $('nav ul').toggle()
       })
+      $('nav ul li a:only-child').click(function(e) {
+        $( '#nav-toggle' ).trigger( "click" )
+      }) 
     })
 
   </script>
