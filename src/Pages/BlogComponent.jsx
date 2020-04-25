@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Site.scss";
+import "../styles/Blog.scss";
 import Slider from "../components/Slider";
 import blogData from "../static/BlogData.json";
 
@@ -103,7 +104,7 @@ export class BlogComponent extends React.Component {
                 <aside className="single_sidebar_widget author_widget">
                   <div className="googleCalendar">
                     <iframe
-                      src={blogData.GoogleCalenderLink}
+                      src="https://calendar.google.com/calendar/b/0/embed?height=225&amp;wkst=1&amp;bgcolor=%23fbfaff&amp;ctz=Asia%2FColombo&amp;src=c2FiZXNhbjk5NkBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bzg2cmN1YmJnbHN0OTQ3YnNrOHVnajNoMWt1b20wMWVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=ZW4ubGsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=c2FiZXNhbi4xNkBjc2UubXJ0LmFjLmxr&amp;color=%23009688&amp;color=%234285F4&amp;color=%23C0CA33&amp;color=%23D81B60&amp;color=%23009688&amp;showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz="
                       height="225"
                       frameBorder="0"
                       scrolling="no"
