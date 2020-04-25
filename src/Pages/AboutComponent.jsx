@@ -1,8 +1,11 @@
 import React from "react";
-import data from "../static/staticData.json";
+import aboutData from "../static/AboutData";
 import { Link } from "react-router-dom";
 
 export const AboutComponent = () => {
+  const parts = aboutData.MySelf.split("\n");
+  let empdetails = [].concat(aboutData.EmploymentDetails).reverse();
+
   return (
     <div>
       {/* <!--================Welcome Area =================--> */}
@@ -11,18 +14,21 @@ export const AboutComponent = () => {
           <div className="row welcome_inner">
             <div className="col-lg-6">
               <div className="welcome_text">
-                <h4>{data.AboutMyself}</h4>
+                <h4>About Myself</h4>
 
                 <p>
-                  {data.AboutT1}
-                  <br /> {data.AboutT2}
+                  {parts.map((p) => (
+                    <React.Fragment>
+                      {p} <br />
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="welcome_text">
-                <h4>{data.Education}</h4>
-                <p>{data.AboutT3}</p>
+                <h4>Education</h4>
+                <p>{aboutData.Education}</p>
               </div>
             </div>
           </div>
@@ -34,31 +40,19 @@ export const AboutComponent = () => {
       <section className="feature_area p_120">
         <div className="container">
           <div className="main_title">
-            <h2>{data.Employment}</h2>
-            <p>{data.AboutT4}</p>
+            <h2>Employment</h2>
+            <p>{aboutData.Employment}</p>
           </div>
           <div className="feature_inner row">
-            <div className="col-lg-4 col-md-6">
-              <div className="feature_item">
-                <i className="flaticon-city"></i>
-                <h4>{data.SyscoLABS}</h4>
-                <p> {data.AboutSyscoLabs}</p>
+            {empdetails.map((details, key) => (
+              <div className="col-lg-4 col-md-6" key={key}>
+                <div className="feature_item">
+                  <i className={details.Icon}></i>
+                  <h4>{details.companyName}</h4>
+                  <p> {details.Description}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="feature_item">
-                <i className="flaticon-skyline"></i>
-                <h4>{data.DialogGaming}</h4>
-                <p>{data.AboutDialogGaming}</p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="feature_item">
-                <i className="flaticon-sketch"></i>
-                <h4>{data.TowardsDataScience}</h4>
-                <p>{data.AboutDataScience}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -68,33 +62,27 @@ export const AboutComponent = () => {
       <section className="testimonials_area testi_two p_120">
         <div className="container">
           <div className="main_title">
-            <h2>{data.DownloadDocuments}</h2>
-            <p>{data.CV}</p>
+            <h2>Download Documents</h2>
+            <p>If you want my Resume or curriculum vitae click blow!</p>
           </div>
           <div className="button-group-area mt-40">
             <Link
-              to="./Docs/CV_Sabesan_Sathananthan.pdf"
+              to={aboutData.Docs.CV}
               target="_blank"
+              rel="noopener noreferrer"
               className="genric-btn success circle arrow"
             >
-              {data.DownloadCV}
+              Download CV
               <i className="fas fa-download"> </i>
             </Link>
             <Link
-              to="./Docs/Resume_Sabesan_Sathananthan.pdf"
+              to={aboutData.Docs.Resume}
               target="_blank"
+              rel="noopener noreferrer"
               className="genric-btn success circle arrow"
             >
-              {data.DownloadRésumé}
+              Download Résumé
               <i className="fas fa-download"> </i>
-            </Link>
-            <Link
-              to="CommingSoon/index.html"
-              target="_blank"
-              className="genric-btn success circle arrow"
-            >
-              {data.ViewOnlineCV}
-              <i className="fas fa-eye"> </i>
             </Link>
           </div>
         </div>

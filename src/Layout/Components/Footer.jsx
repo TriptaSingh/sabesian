@@ -1,13 +1,12 @@
 import React from "react";
-import "../../styles/Footer.scss";
-import data from "../../static/staticData.json";
-import LinkedIn from "../../images/FooterIcons/LinkedIn.png";
-import Facebook from "../../images/FooterIcons/Facebook.png";
-import Twitter from "../../images/FooterIcons/Twitter.png";
-import WhatsApp from "../../images/FooterIcons/WhatsApp.png";
-import "../../styles/Site.scss";
+import "../../assets/styles/Footer.scss";
+import footerData from "../../static/FooterData";
+import generalData from "../../static/GeneralData";
+import "../../assets/styles/Site.scss";
 
 export const Footer = () => {
+  let parts = footerData.FooterLine.split("\n");
+
   return (
     <footer className="footer_area p_footer">
       <div className="container">
@@ -15,16 +14,19 @@ export const Footer = () => {
           <div className="col-lg-5 col-sm-6">
             <aside className="f_widget ab_widget">
               <div className="f_title">
-                <h3>{data.Sabesan}</h3>
+                <h3>{generalData.FirstName}</h3>
                 <br />
                 <p>
-                  {data.FooterT1} <br />
-                  {data.FooterT2}
+                  {parts.map((p, index) => (
+                    <React.Fragment>
+                      {p} <br key={index} />
+                    </React.Fragment>
+                  ))}
                 </p>
 
                 <p>
-                  {data.Copyright} &copy;
-                  {new Date().getFullYear()} {data.Sabesan} {data.Sathananthan}
+                  Copyright &copy;
+                  {new Date().getFullYear()} {generalData.FullName}
                 </p>
               </div>
             </aside>
@@ -32,53 +34,28 @@ export const Footer = () => {
           <div className="col-lg-5">
             <aside className="f_widget social_widget">
               <div className="f_titlefooter">
-                <h3>{data.FollowMe}</h3>
+                <h3>FollowMe</h3>
                 <br />
-                <p>{data.Letusbesocial}</p>
+                <p>Let us be social</p>
               </div>
               <ul className="list">
-                <a
-                  href="https://www.linkedin.com/in/sabesan96/"
-                  target="_blank"
-                >
-                  <img
-                    border="0"
-                    alt="LinkedIn"
-                    src={LinkedIn}
-                    width="88"
-                    height="50"
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/sathananthan.sabesan"
-                  target="_blank"
-                >
-                  <img
-                    border="0"
-                    alt="Facebook"
-                    src={Facebook}
-                    width="88"
-                    height="50"
-                  />
-                </a>
-                <a href="https://twitter.com/TheSabesan" target="_blank">
-                  <img
-                    border="0"
-                    alt="Twitter"
-                    src={Twitter}
-                    width="88"
-                    height="50"
-                  />
-                </a>
-                <a href="https://wa.me/94770711017" target="_blank">
-                  <img
-                    border="0"
-                    alt="WhatsApp"
-                    src={WhatsApp}
-                    width="88"
-                    height="50"
-                  />
-                </a>
+                {footerData.SociaMedia.map((media, index) => (
+                  <a
+                    href={media.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={index}
+                  >
+                    <img
+                      border="0"
+                      alt={media.Name}
+                      src={media.ImgSrc}
+                      width="88"
+                      height="50"
+                      key={index}
+                    />
+                  </a>
+                ))}
               </ul>
             </aside>
           </div>

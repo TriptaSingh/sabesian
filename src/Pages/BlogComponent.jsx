@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/Site.scss";
-import data from "../static/staticData.json";
+import "../assets/styles/Site.scss";
+import "../assets/styles/Blog.scss";
 import Slider from "../components/Slider";
+import blogData from "../static/BlogData";
 
 export class BlogComponent extends React.Component {
   componentDidMount() {
@@ -38,18 +39,22 @@ export class BlogComponent extends React.Component {
                   <div className="jumbotron text-center">
                     <div id="logo"></div>
                     <h1 className="display-4 mb-3 name name-small name-small-small">
-                      {data.Blog1}
+                      {blogData.MediumUserName}'s Posts
                     </h1>
                     <div className="main_title">
-                      <p>{data.Blog2}</p>
+                      <p>
+                        Here you can see only my last 10 blog articles. If you
+                        want more posts click the below button
+                      </p>
                     </div>
                     <a
                       className="banner_btn"
-                      href="https://medium.com/@sabesan96"
+                      href={`https://medium.com/${blogData.MediumUserName}`}
                       target="_blank"
+                      rel="noopener noreferrer"
                       role="button"
                     >
-                      {data.Blog3} <i className="fas fa-newspaper-o"></i>
+                      View All Posts <i className="fas fa-newspaper"></i>
                     </a>
                   </div>
                   <Slider />
@@ -63,9 +68,11 @@ export class BlogComponent extends React.Component {
                     <div className="mb-5">
                       <a
                         className="banner_btn"
-                        href="https://medium.com/@sabesan96"
+                        href={`https://medium.com/${blogData.MediumUserName}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        {data.Blog3} <i className="fas fa-newspaper-o"></i>
+                        View All Posts <i className="fas fa-newspaper"></i>
                       </a>
                     </div>
                   </div>
@@ -77,22 +84,22 @@ export class BlogComponent extends React.Component {
                 <aside className="single_sidebar_widget author_widget">
                   <a
                     className="twitter-timeline"
-                    href="https://twitter.com/TheSabesan?ref_src=twsrc%5Etfw"
+                    href={blogData.TwitterBannerLink}
                     data-tweet-limit="3"
                   >
-                    {data.Blog4}
+                    Tweets by {blogData.TwitterUserName}
                   </a>
                 </aside>
                 <aside className="single_sidebar_widget popular_post_widget">
                   <div className="blogAside1">
                     <a
-                      href="https://twitter.com/intent/tweet?screen_name=TheSabesan&ref_src=twsrc%5Etfw"
+                      href={blogData.TwitterButtonLink}
                       className="twitter-mention-button"
                       data-size="large"
                       data-dnt="true"
                       data-show-count="false"
                     >
-                      {data.Blog5}
+                      Tweet to @{blogData.TwitterUserName}
                     </a>
                   </div>
                 </aside>
@@ -100,8 +107,8 @@ export class BlogComponent extends React.Component {
                 <aside className="single_sidebar_widget author_widget">
                   <div className="googleCalendar">
                     <iframe
+                      title="GoogleCalnder"
                       src="https://calendar.google.com/calendar/b/0/embed?height=225&amp;wkst=1&amp;bgcolor=%23fbfaff&amp;ctz=Asia%2FColombo&amp;src=c2FiZXNhbjk5NkBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bzg2cmN1YmJnbHN0OTQ3YnNrOHVnajNoMWt1b20wMWVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=ZW4ubGsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=c2FiZXNhbi4xNkBjc2UubXJ0LmFjLmxr&amp;color=%23009688&amp;color=%234285F4&amp;color=%23C0CA33&amp;color=%23D81B60&amp;color=%23009688&amp;showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0"
-                      width="300"
                       height="225"
                       frameBorder="0"
                       scrolling="no"

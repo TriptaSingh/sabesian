@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Site.scss";
+import "../assets/styles/Site.scss";
 
 export default function ImageCardComponent(image) {
   return (

@@ -1,16 +1,17 @@
 import React from "react";
-import pdf from "../../images/Icons/pdf.svg";
-import "../../styles/Project.scss";
-import data from "../../static/staticData.json";
-import Project_Proposal from "../../Docs/Project_Proposal.pdf";
-import Feasibility_report from "../../Docs/Feasibility_report.pdf";
-import Software_Requirements_Specification from "../../Docs/Software_Requirements_Specification.pdf";
-import Software_Architecture_Document from "../../Docs/Software_Architecture_Document.pdf";
-import Test_plan from "../../Docs/Test_plan.pdf";
-import Final_Report from "../../Docs/Final_Report.pdf";
+import pdf from "../../assets/images/Icons/pdf.svg";
+import "../../assets/styles/Project.scss";
+import Project_Proposal from "../../assets/Docs/Project_Proposal.pdf";
+import Feasibility_report from "../../assets/Docs/Feasibility_report.pdf";
+import Software_Requirements_Specification from "../../assets/Docs/Software_Requirements_Specification.pdf";
+import Software_Architecture_Document from "../../assets/Docs/Software_Architecture_Document.pdf";
+import Test_plan from "../../assets/Docs/Test_plan.pdf";
+import Final_Report from "../../assets/Docs/Final_Report.pdf";
+import projectDetails from "../../static/ProjectData";
 
 export const FaceCSComponent = () => {
-const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
+  const PageDatails = projectDetails.Projects[8].data;
+  const parts = PageDatails.Description.split("\n");
 
   return (
     <section className="portfolio_details_area p_120">
@@ -19,44 +20,58 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={FaceCS} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
               <div className="portfolio_right_text">
-                <h4>{data.FCS}</h4>
-                <p>
-                  {data.FCST1}
-                  <sup>
-                    <font color="#777777">{data.th}</font>
-                  </sup>
-                  {data.FCST2}
-                </p>
+                <h4>{PageDatails.Title}</h4>
+                <p className="alignText">{PageDatails.ProjectIntro}</p>
                 <ul className="list">
                   <li>
-                    <span>{data.Year}</span>
-                    {data.numYR19}
+                    <span>Year</span>: {PageDatails.Year}
                   </li>
+                  {PageDatails["Tools Used"] ? (
+                    <li>
+                      <span>
+                        <h5>Tools Used</h5>
+                      </span>
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Software ? (
+                    <li>
+                      <span>Software</span>:{" "}
+                      {PageDatails["Tools Used"].Software}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Hardware ? (
+                    <li>
+                      <span>Hardware</span>:{" "}
+                      {PageDatails["Tools Used"].Hardware}
+                    </li>
+                  ) : null}
+                  {PageDatails["Tools Used"].Environment ? (
+                    <li>
+                      <span>Environment</span>:{" "}
+                      {PageDatails["Tools Used"].Environment}
+                    </li>
+                  ) : null}
+                  {/* Start Document */}
                   <li>
                     <span>
-                      <h5>{data.ToolsUsed}</h5>
+                      <h5>Documents</h5>
                     </span>
+                    : Click the icon to Download Documents
                   </li>
-                  <li>
-                    <span>{data.Software}</span>: Android Studio
-                  </li>
-                  <li>
-                    <span>
-                      <h5>{data.Documents}</h5>
-                    </span>
-                    {data.ArthrocureT4}
-                  </li>
-
                   <div className="social_widget">
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={Project_Proposal} target="_blank">
+                          <a
+                            href={Project_Proposal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -66,13 +81,17 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.Proposal}</font>
+                            <font size="1">Proposal</font>
                           </figcaption>
                         </figure>
                       </li>
                       <li>
                         <figure>
-                          <a href={Feasibility_report} target="_blank">
+                          <a
+                            href={Feasibility_report}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -82,7 +101,7 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.Feasibility}</font>
+                            <font size="1">Feasibility</font>
                           </figcaption>
                         </figure>
                       </li>
@@ -91,6 +110,7 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                           <a
                             href={Software_Requirements_Specification}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <img
                               className="img-fluid"
@@ -101,7 +121,7 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.SRS}</font>
+                            <font size="1">SRS</font>
                           </figcaption>
                         </figure>
                       </li>
@@ -110,6 +130,7 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                           <a
                             href={Software_Architecture_Document}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <img
                               className="img-fluid"
@@ -120,13 +141,17 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.SAD}</font>
+                            <font size="1">SAD</font>
                           </figcaption>
                         </figure>
                       </li>
                       <li>
                         <figure>
-                          <a href={Test_plan} target="_blank">
+                          <a
+                            href={Test_plan}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -136,13 +161,17 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.TestPlan}</font>
+                            <font size="1">Test Plan</font>
                           </figcaption>
                         </figure>
                       </li>
                       <li>
                         <figure>
-                          <a href={Final_Report} target="_blank">
+                          <a
+                            href={Final_Report}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -152,18 +181,22 @@ const FaceCS =window.location.origin + "/Docs/Project/Faceclassify.jpg";
                             />
                           </a>
                           <figcaption>
-                            <font size="1">{data.FinalReport}</font>
+                            <font size="1">Final Report</font>
                           </figcaption>
                         </figure>
                       </li>
+                      {/* End Document */}
                     </ul>
                   </div>
                 </ul>
               </div>
             </div>
           </div>
-          <p>{data.FCST3}</p>
-          <p>{data.FCST4}</p>
+          {parts.map((p, key) => (
+            <p className="alignText" key={key}>
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>

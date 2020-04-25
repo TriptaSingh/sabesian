@@ -26,11 +26,11 @@ export default function MediumCard(props) {
           <a
             href={props.profilelink}
             target="_blank"
+            rel="noopener noreferrer"
             className="card-post__author-avatar card-post__author-avatar--small"
             style={{
               backgroundImage: `url(${props.avatar})`,
             }}
-            rel="noopener noreferrer"
           >
             Written by {props.author}
           </a>
@@ -41,8 +41,8 @@ export default function MediumCard(props) {
           <a
             href={props.link}
             target="_blank"
-            className="text-fiord-blue"
             rel="noopener noreferrer"
+            className="text-fiord-blue"
           >
             {ShortenText(props.title, 0, 50)}
           </a>
@@ -60,7 +60,10 @@ export default function MediumCard(props) {
         <br />
 
         <span className="text-muted">
-          <i class="fas fa-calendar-alt" style={{ marginRight: "0.5em" }}></i>
+          <i
+            className="fas fa-calendar-alt"
+            style={{ marginRight: "0.5em" }}
+          ></i>
           {publishDate}
         </span>
       </CardBody>
