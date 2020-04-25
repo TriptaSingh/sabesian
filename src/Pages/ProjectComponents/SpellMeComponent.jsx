@@ -1,10 +1,9 @@
 import React from "react";
-import ppt from "../../images/Icons/ppt.png";
-import SpellMeFile from "../../Docs/SpellMe.pptx";
-import projectDetails from "../../static/ProjectData.json";
+import ppt from "../../assets/images/Icons/ppt.png";
+import SpellMeFile from "../../assets/Docs/SpellMe.pptx";
+import projectDetails from "../../static/ProjectData";
 
 export const SpellMeComponent = () => {
-  const SpellMe = window.location.origin + "/Docs/Project/spell Me.jpg";
   const PageDatails = projectDetails.Projects[6].data;
   const parts = PageDatails.Description.split("\n");
 
@@ -15,7 +14,7 @@ export const SpellMeComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={SpellMe} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -62,7 +61,11 @@ export const SpellMeComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={SpellMeFile} target="_blank">
+                          <a
+                            href={SpellMeFile}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={ppt}
@@ -87,6 +90,7 @@ export const SpellMeComponent = () => {
                   <a
                     href="https://medium.com/datadriveninvestor/edutainment-game-spell-me-66fb21fb1b80"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i
                       className="fab fa-medium customSize"

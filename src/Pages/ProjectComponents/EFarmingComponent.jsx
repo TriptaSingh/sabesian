@@ -1,10 +1,9 @@
 import React from "react";
-import ppt from "../../images/Icons/ppt.png";
-import EFarmingFile from "../../Docs/EFarming.pptx";
-import projectDetails from "../../static/ProjectData.json";
+import ppt from "../../assets/images/Icons/ppt.png";
+import EFarmingFile from "../../assets/Docs/EFarming.pptx";
+import projectDetails from "../../static/ProjectData";
 
 export const EFarmingComponent = () => {
-  const EFarming = window.location.origin + "/Docs/Project/EFarming.jpg";
   const PageDatails = projectDetails.Projects[5].data;
   const parts = PageDatails.Description.split("\n");
   return (
@@ -14,7 +13,7 @@ export const EFarmingComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={EFarming} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -61,7 +60,11 @@ export const EFarmingComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={EFarmingFile} target="_blank">
+                          <a
+                            href={EFarmingFile}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={ppt}
@@ -91,6 +94,7 @@ export const EFarmingComponent = () => {
                           <a
                             href="https://medium.com/codezillas/e-farming-831fe010ee4c"
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <i
                               className="fab fa-medium customSize"
@@ -107,6 +111,7 @@ export const EFarmingComponent = () => {
                           <a
                             href="https://medium.com/codezillas/e-farming-extended-by-ai-2618e106705b"
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <i
                               className="fab fa-medium customSize"

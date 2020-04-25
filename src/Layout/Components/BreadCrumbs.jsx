@@ -1,8 +1,9 @@
 import React from "react";
-import data from "../../static/staticData.json";
-import "../../styles/BreadCrumbs.scss";
+import "../../assets/styles/BreadCrumbs.scss";
 import { Link } from "react-router-dom";
-import myImage from "../../images/Banner/home-left-1.png";
+import myImage from "../../assets/images/Banner/home-left-1.png";
+import generalData from "../../static/GeneralData";
+import homeData from "../../static/HomeData";
 
 export class BreadCrumbsComponent extends React.Component {
   constructor(props) {
@@ -50,11 +51,11 @@ export class BreadCrumbsComponent extends React.Component {
                     </div>
                     <div className="col-lg-6">
                       <div className="banner_content">
-                        <h5>{data.Thisisme}</h5>
-                        <h2>{data.SabesanSathananthan}</h2>
-                        <p>{data.BreadCrumb1}</p>
+                        <h5>This is me</h5>
+                        <h2>{generalData.FullName}</h2>
+                        <p>{homeData.MeIntro}</p>
                         <Link className="fonsS1 banner_btn" to="/about">
-                          {data.DiscoverNow} <i className="fas fa-search"></i>
+                          Discover Now <i className="fas fa-search"></i>
                         </Link>
                       </div>
                     </div>

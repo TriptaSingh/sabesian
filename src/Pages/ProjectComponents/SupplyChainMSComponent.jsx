@@ -1,10 +1,9 @@
 import React from "react";
-import pdf from "../../images/Icons/pdf.svg";
-import SupplyChainManagement from "../../Docs/SupplyChainManagement.pdf";
-import projectDetails from "../../static/ProjectData.json";
+import pdf from "../../assets/images/Icons/pdf.svg";
+import SupplyChainManagement from "../../assets/Docs/SupplyChainManagement.pdf";
+import projectDetails from "../../static/ProjectData";
 
 export const SupplyChainMSComponent = () => {
-  const SupplyChain = window.location.origin + "/Docs/Project/SupplyChain.jpg";
   const PageDatails = projectDetails.Projects[3].data;
   const parts = PageDatails.Description.split("\n");
 
@@ -15,7 +14,7 @@ export const SupplyChainMSComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={SupplyChain} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -62,7 +61,11 @@ export const SupplyChainMSComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={SupplyChainManagement} target="_blank">
+                          <a
+                            href={SupplyChainManagement}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}

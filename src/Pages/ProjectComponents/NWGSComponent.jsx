@@ -1,10 +1,9 @@
 import React from "react";
-import pdf from "../../images/Icons/pdf.svg";
-import NWGSProjectDescription from "../../Docs/NWGSProjectDescription.pdf";
-import projectDetails from "../../static/ProjectData.json";
+import pdf from "../../assets/images/Icons/pdf.svg";
+import NWGSProjectDescription from "../../assets/Docs/NWGSProjectDescription.pdf";
+import projectDetails from "../../static/ProjectData";
 
 export const NWGSComponent = () => {
-  const Nozama = window.location.origin + "/Docs/Project/Nozama.jpg";
   const PageDatails = projectDetails.Projects[0].data;
   const parts = PageDatails.Description.split("\n");
   return (
@@ -14,7 +13,7 @@ export const NWGSComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={Nozama} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -61,7 +60,11 @@ export const NWGSComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={NWGSProjectDescription} target="_blank">
+                          <a
+                            href={NWGSProjectDescription}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -86,6 +89,7 @@ export const NWGSComponent = () => {
                   <a
                     href="https://github.com/sabesansathananthan/Nozama_Warriors"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <font color="black">
                       <i className="fab fa-github-square customSize"></i>
