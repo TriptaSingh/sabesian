@@ -1,11 +1,10 @@
 import React from "react";
-import pdf from "../../images/Icons/pdf.svg";
-import ProjectDescription from "../../Docs/ProjectDescription.pdf";
-import Report from "../../Docs/Report.pdf";
-import projectDetails from "../../static/ProjectData.json";
+import pdf from "../../assets/images/Icons/pdf.svg";
+import ProjectDescription from "../../assets/Docs/ProjectDescription.pdf";
+import Report from "../../assets/Docs/Report.pdf";
+import projectDetails from "../../static/ProjectData";
 
 export const NPDComponent = () => {
-  const NanoPro = window.location.origin + "/Docs/Project/NanoPro.jpg";
   const PageDatails = projectDetails.Projects[1].data;
   const parts = PageDatails.Description.split("\n");
   return (
@@ -15,7 +14,7 @@ export const NPDComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={NanoPro} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -62,7 +61,11 @@ export const NPDComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={ProjectDescription} target="_blank">
+                          <a
+                            href={ProjectDescription}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -78,7 +81,11 @@ export const NPDComponent = () => {
                       </li>
                       <li>
                         <figure>
-                          <a href={Report} target="_blank">
+                          <a
+                            href={Report}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -102,7 +109,10 @@ export const NPDComponent = () => {
                   </li>
                   <a href="#" target="_blank">
                     <font color="black">
-                      <i className="fab fa-github-square customSize"></i>
+                      <i
+                        className="fab fa-github-square customSize"
+                        rel="noopener noreferrer"
+                      ></i>
                     </font>
                   </a>
                   {/* End Document */}

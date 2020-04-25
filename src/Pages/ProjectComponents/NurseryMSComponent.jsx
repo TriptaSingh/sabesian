@@ -1,8 +1,7 @@
 import React from "react";
-import projectDetails from "../../static/ProjectData.json";
+import projectDetails from "../../static/ProjectData";
 
 export const NurseryMSComponent = () => {
-  const Nursery = window.location.origin + "/Docs/Project/Nursery.jpg";
   const PageDatails = projectDetails.Projects[2].data;
   const parts = PageDatails.Description.split("\n");
   return (
@@ -12,7 +11,7 @@ export const NurseryMSComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={Nursery} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -58,6 +57,7 @@ export const NurseryMSComponent = () => {
                   <a
                     href="https://github.com/sabesansathananthan/Nursery_Management"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <font color="black">
                       <i className="fab fa-github-square customSize"></i>

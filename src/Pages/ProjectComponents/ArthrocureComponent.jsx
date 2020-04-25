@@ -1,9 +1,9 @@
 import React from "react";
-import ppt from "../../images/Icons/ppt.png";
-import ArthroCure from "../../Docs/ArthroCure.pptx";
-import projectDetails from "../../static/ProjectData.json";
+import ppt from "../../assets/images/Icons/ppt.png";
+import ArthroCure from "../../assets/Docs/ArthroCure.pptx";
+import projectDetails from "../../static/ProjectData";
+
 export const ArthrocureComponent = () => {
-  const imgPath = "/Docs/Project/Arthritis.jpg";
   const PageDatails = projectDetails.Projects[7].data;
   const parts = PageDatails.Description.split("\n");
   return (
@@ -13,11 +13,7 @@ export const ArthrocureComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img
-                  className="img-fluid"
-                  src={window.location.origin + imgPath}
-                  alt=""
-                />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -64,7 +60,11 @@ export const ArthrocureComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={ArthroCure} target="_blank">
+                          <a
+                            href={ArthroCure}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={ppt}
@@ -95,6 +95,7 @@ export const ArthrocureComponent = () => {
       <br /> <br />
       <div className="text-center">
         <iframe
+          title="Arthrocure"
           width="560px"
           height="315"
           src="https://www.youtube.com/embed/bHQitg7SEx4"

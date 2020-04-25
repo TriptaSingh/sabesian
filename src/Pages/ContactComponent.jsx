@@ -1,7 +1,6 @@
 import React from "react";
-import data from "../static/staticData.json";
 import MapContainer from "../Layout/Components/GoogleMap";
-import contactData from "../static/ContactData.json";
+import contactData from "../static/ContactData.js";
 // import GoogleMapReact from 'google-map-react';
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -41,7 +40,9 @@ const ContactFieldComponent = () => {
                 <div className="info_item">
                   <i className="lnr lnr-envelope"></i>
                   <h6>
-                    <a href="mailto:sabesan996@gmail.com">{data.ContEmail}</a>
+                    <a href={`mailto:${contactData.MailInfo.MailAddress}`}>
+                      {contactData.MailInfo.MailAddress}
+                    </a>
                   </h6>
                   <p>Send me your questions anytime!</p>
                 </div>
@@ -57,6 +58,7 @@ const ContactFieldComponent = () => {
                             onMouseOut={onMouseOut}
                             href={data.ProfileLink}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <i
                               className={`fontSize2 ${data.fontAwesomeIconName}`}
@@ -118,7 +120,7 @@ const ContactFieldComponent = () => {
                 </div>
                 <div className="col-md-12 text-right">
                   <button type="submit" value="submit" className="submit_btn">
-                    {data.SendMessage} <i className="fas fa-envelope"></i>
+                    Send Message <i className="fas fa-envelope"></i>
                   </button>
                 </div>
               </form>

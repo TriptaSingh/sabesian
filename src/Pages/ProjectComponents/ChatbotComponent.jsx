@@ -1,8 +1,7 @@
 import React from "react";
-import projectDetails from "../../static/ProjectData.json";
+import projectDetails from "../../static/ProjectData";
 
 export const ChatbotComponent = () => {
-  const Chatbot = window.location.origin + "/Docs/Project/Chatbot.jpg";
   const PageDatails = projectDetails.Projects[4].data;
   const parts = PageDatails.Description.split("\n");
 
@@ -13,7 +12,7 @@ export const ChatbotComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={Chatbot} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -59,6 +58,7 @@ export const ChatbotComponent = () => {
                   <a
                     href="https://github.com/sabesansathananthan/chatbot"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <font color="black">
                       <i className="fab fa-github-square customSize"></i>

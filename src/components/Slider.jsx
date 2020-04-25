@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "shards-react";
 import MediumCard from "./MediumCard";
-import "../styles/shards-dashboards.1.1.0.min.css";
-import blogData from "../static/BlogData.json";
+import "../assets/styles/shards-dashboards.1.1.0.min.css";
+import blogData from "../static/BlogData";
 
 // wrapper for items
 
@@ -33,7 +33,6 @@ class Slider extends React.Component {
           itemRows[row].push(item);
         });
         this.setState({ itemRows: itemRows });
-        console.log(itemRows);
       });
   }
   render() {

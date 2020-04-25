@@ -1,16 +1,15 @@
 import React from "react";
-import pdf from "../../images/Icons/pdf.svg";
-import "../../styles/Project.scss";
-import Project_Proposal from "../../Docs/Project_Proposal.pdf";
-import Feasibility_report from "../../Docs/Feasibility_report.pdf";
-import Software_Requirements_Specification from "../../Docs/Software_Requirements_Specification.pdf";
-import Software_Architecture_Document from "../../Docs/Software_Architecture_Document.pdf";
-import Test_plan from "../../Docs/Test_plan.pdf";
-import Final_Report from "../../Docs/Final_Report.pdf";
-import projectDetails from "../../static/ProjectData.json";
+import pdf from "../../assets/images/Icons/pdf.svg";
+import "../../assets/styles/Project.scss";
+import Project_Proposal from "../../assets/Docs/Project_Proposal.pdf";
+import Feasibility_report from "../../assets/Docs/Feasibility_report.pdf";
+import Software_Requirements_Specification from "../../assets/Docs/Software_Requirements_Specification.pdf";
+import Software_Architecture_Document from "../../assets/Docs/Software_Architecture_Document.pdf";
+import Test_plan from "../../assets/Docs/Test_plan.pdf";
+import Final_Report from "../../assets/Docs/Final_Report.pdf";
+import projectDetails from "../../static/ProjectData";
 
 export const FaceCSComponent = () => {
-  const FaceCS = window.location.origin + "/Docs/Project/Faceclassify.jpg";
   const PageDatails = projectDetails.Projects[8].data;
   const parts = PageDatails.Description.split("\n");
 
@@ -21,7 +20,7 @@ export const FaceCSComponent = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="left_img">
-                <img className="img-fluid" src={FaceCS} alt="" />
+                <img className="img-fluid" src={PageDatails.ImageURL} alt="" />
               </div>
             </div>
             <div className="col-md-6">
@@ -68,7 +67,11 @@ export const FaceCSComponent = () => {
                     <ul className="list">
                       <li>
                         <figure>
-                          <a href={Project_Proposal} target="_blank">
+                          <a
+                            href={Project_Proposal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -84,7 +87,11 @@ export const FaceCSComponent = () => {
                       </li>
                       <li>
                         <figure>
-                          <a href={Feasibility_report} target="_blank">
+                          <a
+                            href={Feasibility_report}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -103,6 +110,7 @@ export const FaceCSComponent = () => {
                           <a
                             href={Software_Requirements_Specification}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <img
                               className="img-fluid"
@@ -122,6 +130,7 @@ export const FaceCSComponent = () => {
                           <a
                             href={Software_Architecture_Document}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <img
                               className="img-fluid"
@@ -138,7 +147,11 @@ export const FaceCSComponent = () => {
                       </li>
                       <li>
                         <figure>
-                          <a href={Test_plan} target="_blank">
+                          <a
+                            href={Test_plan}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
@@ -154,7 +167,11 @@ export const FaceCSComponent = () => {
                       </li>
                       <li>
                         <figure>
-                          <a href={Final_Report} target="_blank">
+                          <a
+                            href={Final_Report}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <img
                               className="img-fluid"
                               src={pdf}
