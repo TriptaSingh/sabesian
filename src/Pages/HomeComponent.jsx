@@ -7,6 +7,8 @@ import img3 from "../assets/images/IndexMedia/3.jpg";
 import img4 from "../assets/images/IndexMedia/4.jpg";
 import { Link } from "react-router-dom";
 import projectData from "../static/ProjectData";
+import blogData from "../static/BlogData";
+
 import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 
@@ -104,7 +106,7 @@ export class HomeComponent extends React.Component {
                 <div className="blogAside1">
                   <a
                     className="banner_btn fontSize1"
-                    href="https://medium.com/@sabesan96"
+                    href={`https://medium.com/${blogData.MediumUserName}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

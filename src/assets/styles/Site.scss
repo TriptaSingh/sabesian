@@ -46,7 +46,7 @@ a input[type="button"]:hover {
 
 li {
   a {
-  text-decoration: none !important;
+    text-decoration: none !important;
   }
 }
 .top-container {
@@ -167,8 +167,9 @@ h6 {
   margin-bottom: 30px;
 }
 .feature_item i {
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   display: block;
+  text-align: center;
 }
 .feature_item i:before {
   margin-left: 0px;
@@ -181,11 +182,28 @@ h6 {
   font-size: 21px;
   font-family: "Heebo", sans-serif;
   font-weight: bold;
-  margin-bottom: 20px;
   text-transform: uppercase;
+  margin-top: 0px;
+  text-align: center;
 }
+.feature_item h5 {
+  color: #444444;
+  font-size: 17.5px !important;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .feature_item p {
   margin-bottom: 0px;
+  text-align: justify;
+}
+.feature_item .text-muted {
+  color: #868e96 !important;
+  font-style: oblique;
+  font-size: 12px;
+  text-align: right;
 }
 .feature_item .main_btn {
   padding: 0px 30px;
@@ -200,6 +218,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .button-group-area {
   text-align: center;
   margin-top: 15px;
@@ -907,14 +926,14 @@ h6 {
   }
 }
 
-@media only screen and (min-device-width : 768px)   
-and (max-device-width : 1007px) //for tablet
-{
+@media only screen and (min-device-width: 768px) and (max-device-width: 1007px) {
+  //for tablet
   .carousel-inner {
     max-height: 350px;
-}
+  }
 }
 
 .carousel-inner {
-  max-width: 1200px; max-height:600px
+  max-width: 1200px;
+  max-height: 600px;
 }

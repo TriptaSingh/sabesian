@@ -48,7 +48,9 @@ export const AboutComponent = () => {
               <div className="col-lg-4 col-md-6" key={key}>
                 <div className="feature_item">
                   <i className={details.Icon}></i>
-                  <h4>{details.companyName}</h4>
+                  <h4>{details.CompanyName}</h4>
+                  <h5>{details.Position}</h5>
+                  <p className="text-muted">{details.Period}</p>
                   <p> {details.Description}</p>
                 </div>
               </div>
