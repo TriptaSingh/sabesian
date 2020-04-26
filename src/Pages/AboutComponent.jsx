@@ -50,6 +50,7 @@ export const AboutComponent = () => {
                   <i className={details.Icon}></i>
                   <h4>{details.CompanyName}</h4>
                   <h5>{details.Position}</h5>
+                  <p className="text-muted">{details.Period}</p>
                   <p> {details.Description}</p>
                 </div>
               </div>

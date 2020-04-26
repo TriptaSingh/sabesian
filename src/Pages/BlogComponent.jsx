@@ -27,6 +27,13 @@ export class BlogComponent extends React.Component {
     //   showPage(parseInt($(this).text()));
     //   return false;
     // });
+    const script = document.createElement("script");
+
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.charset = "utf-8";
+    script.async = true;
+
+    document.body.appendChild(script);
   }
   render() {
     return (
