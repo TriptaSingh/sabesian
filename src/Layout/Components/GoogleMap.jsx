@@ -3,13 +3,20 @@ import React from "react";
 class MapContainer extends React.Component {
   render() {
     const mapStyles = {
-      width: "105%",
-      height: "60%",
-      left: "115px",
-      top: "125px",
+      width: "100%",
+      height: "100%",
+      left: "0px",
+      top: "0px",
     };
     return (
-      <div style={{ position: "relative", width: "80vw", height: "110vh" }}>
+      <div
+        style={{
+          height: "420px",
+          marginBottom: " 80px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
         <Map
           google={this.props.google}
           zoom={14}

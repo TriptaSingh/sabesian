@@ -19,7 +19,10 @@ export class BreadCrumbsComponent extends React.Component {
         : "";
     const crumbs = this.props.breadCLinks;
     return crumbs.length > 1 ? (
-      <div className="top-container" style={{ paddingTop: "220px" }}>
+      <div
+        className="top-container"
+        style={{ paddingTop: "220px", paddingBottom: "220px" }}
+      >
         <h2 key="headerBreadC" className="headerBreadC">
           {pageName}
         </h2>
