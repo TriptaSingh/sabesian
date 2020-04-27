@@ -13,7 +13,8 @@ export default {
     {
       CompanyName: "Towards Data Science",
       Position: "Technical Writer",
-      Period: "(2018 Apr - Present)",
+      StartDate: "2018 Aug",
+      EndDate: "Present",
       Description:
         "Technical Writer @ Toward Data Science. Towards Data Science provides a platform for thousands of people to exchange ideas in Medium.com",
       Icon: "flaticon-sketch",
@@ -21,7 +22,8 @@ export default {
     {
       CompanyName: "Dialog Gaming",
       Position: "Game Developer",
-      Period: "(2018 Dec - 2019 Jan)",
+      StartDate: "2018 Dec",
+      EndDate: "2019 Jan",
       Description:
         "Game Developer @ Dialog Gaming. Here I am creating and developing an Android mobile educational game which is titled: Spell Me.",
       Icon: "flaticon-skyline",
@@ -29,7 +31,8 @@ export default {
     {
       CompanyName: "Sysco LABS",
       Position: "Intern-Software Engineer",
-      Period: "(2019 Jun - 2019 Dec)",
+      StartDate: "2019 Jun",
+      EndDate: "2019 Dec",
       Description:
         "Worked as an intern-software engineer in the food services domain primarily working on a project facilitating interaction between the business and external vendors. Gained experience in full stack development, test scenarios, test case writing with React Js, TypeScript, Redux-Saga, Jest, Enzyme, Chai, Mocha and Java.",
       Icon: "flaticon-city",
@@ -37,7 +40,8 @@ export default {
     {
       CompanyName: "Hatchyard",
       Position: "Software Engineer Intern",
-      Period: "(2020 Apr - Present)",
+      StartDate: "2020 Apr",
+      EndDate: "Present",
       Description: "Intern-Software engineer @ Hatchyard (Private) LTD",
       Icon: "flaticon-skyline",
     },

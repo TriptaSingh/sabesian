@@ -16,14 +16,13 @@ export const Footer = () => {
               <div className="f_title">
                 <h3>{generalData.FirstName}</h3>
                 <br />
-                <p>
-                  {parts.map((p, index) => (
-                    <React.Fragment>
-                      {p} <br key={index} />
-                    </React.Fragment>
-                  ))}
-                </p>
 
+                {parts.map((p, index) => (
+                  <p className="no-margin-text" key={index}>
+                    {p} <br key={index} />
+                  </p>
+                ))}
+                <br />
                 <p>
                   Copyright &copy;
                   {new Date().getFullYear()} {generalData.FullName}

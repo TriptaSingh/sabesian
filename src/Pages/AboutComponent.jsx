@@ -4,7 +4,17 @@ import { Link } from "react-router-dom";
 
 export const AboutComponent = () => {
   const parts = aboutData.MySelf.split("\n");
-  let empdetails = [].concat(aboutData.EmploymentDetails).reverse();
+  const sortedEmploymentDetails = []
+    .concat(aboutData.EmploymentDetails)
+    .sort((a, b) => {
+      let EndDateA = a.EndDate === "Present" ? new Date() : new Date(a.EndDate);
+      let EndDateB = b.EndDate === "Present" ? new Date() : new Date(b.EndDate);
+      let StartDateA = new Date(a.StartDate);
+      let StartDateB = new Date(b.StartDate);
+      return EndDateA - EndDateB === 0
+        ? StartDateB - StartDateA
+        : EndDateB - EndDateA;
+    });
 
   return (
     <div>
@@ -16,13 +26,11 @@ export const AboutComponent = () => {
               <div className="welcome_text">
                 <h4>About Myself</h4>
 
-                <p>
-                  {parts.map((p) => (
-                    <React.Fragment>
-                      {p} <br />
-                    </React.Fragment>
-                  ))}
-                </p>
+                {parts.map((p, index) => (
+                  <p className="no-margin-text" key={index}>
+                    {p} <br key={index} />
+                  </p>
+                ))}
               </div>
             </div>
             <div className="col-lg-6">
@@ -44,13 +52,19 @@ export const AboutComponent = () => {
             <p>{aboutData.Employment}</p>
           </div>
           <div className="feature_inner row">
-            {empdetails.map((details, key) => (
+            {sortedEmploymentDetails.map((details, key) => (
               <div className="col-lg-4 col-md-6" key={key}>
                 <div className="feature_item">
                   <i className={details.Icon}></i>
                   <h4>{details.CompanyName}</h4>
                   <h5>{details.Position}</h5>
-                  <p className="text-muted">{details.Period}</p>
+                  <h6 className="text-muted">
+                    {"("}
+                    {details.StartDate}
+                    {" - "}
+                    {details.EndDate}
+                    {")"}
+                  </h6>
                   <p> {details.Description}</p>
                 </div>
               </div>
