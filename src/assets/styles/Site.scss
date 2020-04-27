@@ -51,10 +51,10 @@ li {
 }
 .top-container {
   background-color: #f9f9ff;
-  padding: 30px;
+  padding: 0px;
   text-align: center;
   // padding-top: 117px;
-  padding-bottom: 117px;
+  padding-bottom: 0px;
 }
 
 .header {
@@ -546,7 +546,9 @@ h6 {
   margin: -3px;
   overflow: hidden;
 }
-
+.pad_top {
+  padding: 120px 0px;
+}
 .moments_area .gallery_item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 16.66%;

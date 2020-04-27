@@ -13,13 +13,19 @@ export class BreadCrumbsComponent extends React.Component {
     };
   }
   render() {
-    const pageName =
-      this.props.breadCLinks.length > 0
-        ? String(this.props.breadCLinks[this.props.breadCLinks.length - 1].name)
-        : "";
+    const pageName = (this.props.breadCLinks.length > 0
+      ? String(this.props.breadCLinks[this.props.breadCLinks.length - 1].name)
+      : ""
+    )
+      .split("%20")
+      .join(" ");
     const crumbs = this.props.breadCLinks;
+
     return crumbs.length > 1 ? (
-      <div className="top-container" style={{ paddingTop: "220px" }}>
+      <div
+        className="top-container"
+        style={{ paddingTop: "220px", paddingBottom: "220px" }}
+      >
         <h2 key="headerBreadC" className="headerBreadC">
           {pageName}
         </h2>
@@ -29,7 +35,7 @@ export class BreadCrumbsComponent extends React.Component {
             {crumbs.map((x, key) => (
               <li className="breadcrumb-item" key={key + "_li"}>
                 <Link to={x.click} key={key}>
-                  {x.name}
+                  {x.name.split("%20").join(" ")}
                 </Link>
               </li>
             ))}

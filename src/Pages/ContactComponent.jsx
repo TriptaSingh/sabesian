@@ -17,6 +17,7 @@ const ContactFieldComponent = () => {
     <React.Fragment>
       <section className="contact_area p_120">
         <div className="container">
+          <MapContainer></MapContainer>
           <div className="row">
             <div className="col-lg-3">
               <div className="contact_info">
@@ -133,12 +134,6 @@ const ContactFieldComponent = () => {
 };
 export default class ContactComponent extends React.Component {
   render() {
-    return (
-      <div>
-        <div className="row"></div>
-        <MapContainer></MapContainer>
-        <ContactFieldComponent></ContactFieldComponent>
-      </div>
-    );
+    return <ContactFieldComponent></ContactFieldComponent>;
   }
 }
