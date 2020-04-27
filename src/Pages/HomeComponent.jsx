@@ -14,9 +14,15 @@ import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent
 
 export class HomeComponent extends React.Component {
   componentDidMount() {
-    var widget = document.getElementById("medium-widget");
-    if (!!widget) {
-      window.mediumWidget();
+    try {
+      
+      var widget = document.getElementById("medium-widget");
+      if (!!widget) {
+        window.mediumWidget();
+      }
+    }
+    catch(e){
+      window.location.reload();
     }
   }
 
