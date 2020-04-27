@@ -36,9 +36,9 @@ export class App extends React.Component {
   }
 
   handleScroll(event) {
-    var header = document.getElementById("myHeader");
+    let header = document.getElementById("myHeader");
     if (!!header) {
-      var sticky = !!header ? header.offsetTop : 0;
+      let sticky = !!header ? header.offsetTop : 0;
       if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
       } else {

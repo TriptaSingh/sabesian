@@ -5,7 +5,7 @@ import ToText from "../utils/ToText";
 
 // functional card component to display single item
 export default function MediumCard(props) {
-  var shortMonthName = new Intl.DateTimeFormat("en-US", {
+  const shortMonthName = new Intl.DateTimeFormat("en-US", {
     month: "short",
   }).format;
   let date = new Date(props.pubDate);

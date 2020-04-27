@@ -25,8 +25,8 @@ export class ProjectComponent extends React.Component {
   }
 
   addStyle(classN, styleTy) {
-    var all = document.getElementsByClassName(classN);
-    for (var i = 0; i < all.length; i++) {
+    const all = document.getElementsByClassName(classN);
+    for (let i = 0; i < all.length; i++) {
       all[i].style.display = styleTy;
     }
   }
