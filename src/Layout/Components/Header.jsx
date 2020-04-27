@@ -54,8 +54,8 @@ export default class HeaderComponent extends React.Component {
                 <Link to="/about">{generalData.Pages.About}</Link>
               </li>
               <li>
-                <Link to="#">{generalData.Pages.Projects}</Link>
-                <ul className="nav-dropdown">
+                <Link to="/projects">{generalData.Pages.Projects}</Link>
+                {/* <ul className="nav-dropdown">
                   <li>
                     <Link to="Project-Face Classification System">
                       Face Classification System
@@ -94,6 +94,7 @@ export default class HeaderComponent extends React.Component {
                     </Link>
                   </li>
                 </ul>
+               */}
               </li>
               <li>
                 <Link to="/blog">{generalData.Pages.Blog}</Link>
