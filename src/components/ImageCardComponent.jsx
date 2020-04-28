@@ -7,8 +7,8 @@ export default function ImageCardComponent(image) {
       <div className="h_gallery_item">
         <img src={image.image} alt="" />
         <div className="hover">
-          <a className="light" href={image.image}>
-            <i className="fa fa-expand"></i>
+          <a className="light" onClick={image.openClick.bind(image)}>
+            <i className="fa fa-expand" id={image.id}></i>
           </a>
         </div>
       </div>

@@ -42,7 +42,7 @@ export default class HeaderComponent extends React.Component {
           </div>
           <nav>
             <div className="nav-mobile">
-              <a id="nav-toggle" href="javaScript:void(0);">
+              <a id="nav-toggle">
                 <span></span>
               </a>
             </div>
