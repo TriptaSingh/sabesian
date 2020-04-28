@@ -15,13 +15,11 @@ import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent
 export class HomeComponent extends React.Component {
   componentDidMount() {
     try {
-      
-      var widget = document.getElementById("medium-widget");
+      const widget = document.getElementById("medium-widget");
       if (!!widget) {
         window.mediumWidget();
       }
-    }
-    catch(e){
+    } catch (e) {
       window.location.reload();
     }
   }
@@ -49,8 +47,8 @@ export class HomeComponent extends React.Component {
   }
 
   addStyle(classN, styleTy) {
-    var all = document.getElementsByClassName(classN);
-    for (var i = 0; i < all.length; i++) {
+    const all = document.getElementsByClassName(classN);
+    for (let i = 0; i < all.length; i++) {
       all[i].style.display = styleTy;
     }
   }
