@@ -25,6 +25,12 @@ export class MediaComponent extends React.Component {
     const iId =event.target.id;   
     this.setState({ imgId: iId });
   }
+
+  setDefaultImg() {
+    this.state.imgId = -1;
+    this.setState();
+  }
+
   render() {
     const imgList = [
       iR3,
@@ -45,7 +51,7 @@ export class MediaComponent extends React.Component {
             {imgList.reverse().map((img, key) => {
               return <ImageCardComponent key={key} image={img} id={key} openClick={this.onImageClick.bind(this)}/>;
             })}
-            <MediaSlider imageList = {imgList} selectedImg={this.state.imgId}></MediaSlider>
+            <MediaSlider imageList = {imgList} selectedImg={this.state.imgId} onClose={this.setDefaultImg.bind(this)}></MediaSlider>
 
           </div>
         </div>

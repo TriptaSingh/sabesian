@@ -21,6 +21,7 @@ export class MediaSlider extends React.Component {
         document.getElementById("myModal").style.display = "none";
         this.state.slideIndex = -1;
         this.setState();
+        this.props.onClose();
     }
 
     plusSlides(event) {
